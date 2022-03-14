@@ -1,6 +1,6 @@
 <footer>
             <div class="legals">
-                <p>Zakaria BOUHOU - 2021</p>
+                <p>Zakaria BOUHOU - <?= date('Y')?></p>
                 <a href="https://github.com/ZakariaBouhou" alt="lien compte Github"><img src="assets/images/logo/github.png"></a>
                 <a href="https://linkedin.com/in/zakariabouhou75000" alt="lien compte linkedin"><img src="assets/images/logo/linkedin.png"></a>
             </div>
