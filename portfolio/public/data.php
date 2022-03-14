@@ -21,7 +21,7 @@ $projects = [
         'Titre' => 'Forum Apex Legends V1',
         'Description' => 'Création d\'un forum francophone autour du jeu Apex Legends. Système d\'inscription et d\'authentification, stats globales, CRUD, Back-Office, sécurité et controles d\'accès',
         'Description complémentaire' => 'Symfony, PHP, Bootstrap, JavaScript, CSS Custom ',
-        'Lien1' => 'https://github.com/ZakariaBouhou/project-apex-forum',
+        'Lien1' => 'https://github.com/ZakariaBouhou/Apex-Legends-Forum',
         'Lien2' => 'https://www.youtube.com/watch?v=G1NN3ZND8CA'
     ],
     'Projet 3' => [
