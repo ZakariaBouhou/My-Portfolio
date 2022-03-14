@@ -1,0 +1,152 @@
+/*GENERAL*/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+abbr {
+    color: red;
+}
+
+/* Menu*/
+nav {
+    background-color: darkslategray;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Landing Page */
+.bg-img {
+    display: flex;
+    flex-direction: column;
+    background-image: url("../images/landing2.jpg");
+    background-size: cover;
+    height: 720px;
+}
+
+#firstname, #job, #city {
+    font-weight: bold;
+}
+
+.eachFirstnameLetter, .eachJobLetter, .eachCityLetter {
+    display: inline-block;
+}
+
+/* Projects */
+
+.projects p {
+    padding-bottom: 1em;;
+}
+
+.content-description > p {
+    padding: 1em;
+}
+
+h3:first-child{
+    padding-bottom: 1.5em;
+    font-style: italic;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: darkred;
+}
+
+/* Contact */
+
+.contact > h2 {
+    padding: 1.4em;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.form label {
+    text-align: left;
+    font-weight: bold;
+}
+
+.form input[type=text], [type=email], [type=submit] {
+    padding: 1.5em;
+}
+
+.form input[type=button] {
+    height: 70px;;
+}    
+
+.form input[value="Tout effacer"] {
+    background-color: rgb(204, 57, 57);
+    font-weight: bold;
+    color: white;
+    font-size: 1em;
+}
+.form input[value="Envoyer"] {
+    background-color: rgb(49, 156, 94);
+    font-weight: bold;
+    color: white;
+    font-size: 1em;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+}
+
+/*Legals*/
+
+.legals:first-child {
+    color: white;
+    padding-top: 1em;
+}
+
+.legals a {
+    color :white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.legals {
+    background-color: darkslategrey;
+    text-align: center;
+}
+
+.legals p {
+    padding-bottom: 1em;
+}
+
+
+/*Animations*/
+@keyframes fromLeftSide {
+    from {
+        transform: translateX(-300px);
+        opacity: 0
+    }
+    
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+@keyframes fromRightSide {
+    from {
+        transform: translateX(5em);
+        opacity: 0
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+
+
+

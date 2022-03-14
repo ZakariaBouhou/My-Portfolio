@@ -1,0 +1,230 @@
+@media screen and (max-width: 767px){
+    /*Nav */
+  
+    nav ul {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        
+    }
+    
+    nav a {
+        display: block;
+        padding: 1.2em;
+    }
+      
+    nav .logo {
+        float: left;
+    }
+
+    /* menu */
+    
+    nav .menu {
+        clear: both;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+    }
+    
+    /* menu icon */
+    
+    nav .menu-icon {
+        float: right;
+        padding: 1.7em 1.4em 1.8em 1.4em;
+    }
+    
+    nav .menu-icon .navicon {
+        background: white;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background .2s ease-out;
+        width: 18px;
+    }
+    
+    nav .menu-icon .navicon:before,
+    nav .menu-icon .navicon:after {
+        background: white;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+    
+    nav .menu-icon .navicon:before {
+        top: 5px;
+    }
+    
+    nav .menu-icon .navicon:after {
+        top: -5px;
+    }
+  
+    /* menu btn */
+    
+    nav .menu-btn {
+        display: none;
+    }
+    
+    nav .menu-btn:checked ~ .menu {
+        max-height: 290px;
+    }
+    
+    nav .menu-btn:checked ~ .menu-icon .navicon {
+        background: transparent;
+    }
+    
+    nav .menu-btn:checked ~ .menu-icon .navicon:before {
+        transform: rotate(-45deg);
+    }
+    
+    nav .menu-btn:checked ~ .menu-icon .navicon:after {
+        transform: rotate(45deg);
+    }
+    
+    nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+    nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+        top: 0;
+    }
+    
+    /* Landing page */
+    
+    .about {
+        background-color:rgba(47,79,79, 0.3);
+        padding: 1em;
+        text-align: center;
+        font-size: 2em;
+        font-style: italic;
+    }
+     
+    #firstname, #job, #city {
+        padding-bottom: 0.8em;
+    }
+
+    #city {
+        padding-bottom: 0;
+    }
+    
+    .bg-img {
+        justify-content: space-evenly;
+    }
+
+    #alert {
+        text-align: center;
+        font-size: 1.2em;
+        color: darkslategray;
+        font-style: italic;
+        font-weight: bold;
+    }
+    /* Description text */
+    
+    .content-description {
+        text-align: center;
+        margin: 0 auto;
+        padding: 1.5em 0 1.5em 0;
+        background-color: rgba(197, 202, 206, 0.8);
+    }
+       
+    .content-description a, li:visited{
+        color: #844;
+    }
+
+    /* Skills */
+    
+    .skills {
+        text-align: center;
+        background-color:rgba(95, 136, 136, 0.5);
+    }
+
+    .skills > h2 {
+        padding: 1.4em;
+        font-size: 2em;
+        text-transform: uppercase;
+    }
+    
+    .tools p{
+        font-size: 1.5em;
+        padding-bottom: 0;
+    }
+
+    .tools img {
+        padding-bottom: 1.5em;;
+    }
+
+    .iconSkills {
+        width: 64px;
+        height: 64px;
+        opacity: 0;
+    }
+    
+    .iconSkills.anim {
+        animation: fromRightSide 0.5s forwards;  
+        animation-delay: 1s;
+    }
+    
+    .skillName.anim {
+        animation: fromLeftSide 1s;
+    }
+
+    /* Projects */
+    
+    .projects {
+        background-color: rgba(226, 204, 176, 0.6);
+        text-align: center;
+    }
+
+    .projects > h2 {
+        padding: 1.4em;
+        font-size: 2em;
+        text-transform: uppercase;
+    }
+    
+    .projects-container { 
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .content-project {
+        border: 1px ridge rgba(0, 0, 0, 0.404);
+    }
+    
+    .projects-container h3 {
+        padding-top: 1.5em;
+    }    
+
+    .itemsProject.anim {
+        animation: fromLeftSide 1s;
+    }
+
+    .projects a:visited {
+        color: #844;  
+        font-weight: bold;
+    }
+
+    /* Contact */
+
+    .contact {
+        text-align: center;
+        background-color:rgb(154, 209, 209);
+    }
+
+    .contact p {
+        text-align: right;
+    }
+    
+    .form-container {
+        width: 100%;
+    }
+       
+    .form textarea{
+        padding: 1.5em;
+        height: 25vh;
+    }
+     
+    /* Legals */
+    
+    .legals {      
+        padding: 1.5em;
+    }
+
+}

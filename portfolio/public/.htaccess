@@ -1,0 +1,7 @@
+Options -Indexes
+
+ErrorDocument 403 "Vous n'avez pas la permission d'accéder à cette ressource."
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.zak-bouhou.com/$1 [R,L]
