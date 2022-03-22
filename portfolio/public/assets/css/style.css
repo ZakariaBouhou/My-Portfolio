@@ -60,6 +60,11 @@ h3:first-child{
     color: darkred;
 }
 
+.infosProjects {
+
+    padding: 1em 0 1em 0;
+}
+
 /* Contact */
 
 .contact > h2 {
