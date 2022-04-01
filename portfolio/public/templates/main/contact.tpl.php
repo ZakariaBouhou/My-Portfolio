@@ -1,4 +1,5 @@
     <?php require __DIR__ . '../../../mail.php';?>
+
     <div class="contact" id="contact">
         <h2>Contact</h2>
         <form action="" method="POST" class="form-container" id="theForm">

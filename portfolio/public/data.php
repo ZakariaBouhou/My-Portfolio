@@ -32,7 +32,7 @@ $projects = [
         'Description' => 'Mini-blog d\'articles avec un CRUD et un Back-Office dans le cadre d\'un entretien d\'embauche',
         'Description complémentaire' => '',
         'Lien1' => 'https://github.com/ZakariaBouhou/mini_blog',
-        'Lien2' => ''
+        'Lien2' => 'https://www.youtube.com/watch?v=uH_C8heLpbA'
     ],
 
     'Projet 4' => [
@@ -45,12 +45,12 @@ $projects = [
     ],
 
     'Projet 5' => [
-        'Titre' => 'Share Your files',
+        'Titre' => 'Share Your Pictures',
         'Technos' => ['assets/images/logo/php.png'],
-        'Description' => 'Projet qui permet le partage de fichiers en ligne',
+        'Description' => 'Projet qui permet le partage d\'images en ligne',
         'Description complémentaire' => '',
         'Lien1' => 'https://github.com/ZakariaBouhou/ShareYourFiles',
-        'Lien2' => ''
+        'Lien2' => 'https://www.youtube.com/watch?v=9r3zitD5gn0'
     ],
     
 ];
