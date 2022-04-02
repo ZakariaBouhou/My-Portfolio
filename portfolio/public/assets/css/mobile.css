@@ -4,8 +4,7 @@
     nav ul {
         margin: 0;
         padding: 0;
-        overflow: hidden;
-        
+        overflow: hidden;       
     }
     
     nav a {
@@ -112,35 +111,17 @@
     #alert {
         text-align: center;
         font-size: 1.2em;
-        color: darkslategray;
-        font-style: italic;
-        font-weight: bold;
+        
     }
     /* Description text */
     
     .content-description {
-        text-align: center;
-        margin: 0 auto;
+        
         padding: 1.5em 0 1.5em 0;
         background-color: rgba(197, 202, 206, 0.8);
     }
        
-    .content-description a, li:visited{
-        color: #844;
-    }
-
     /* Skills */
-    
-    .skills {
-        text-align: center;
-        background-color:rgba(95, 136, 136, 0.5);
-    }
-
-    .skills > h2 {
-        padding: 1.4em;
-        font-size: 2em;
-        text-transform: uppercase;
-    }
     
     .tools p{
         font-size: 1.5em;
@@ -149,13 +130,7 @@
 
     .tools img {
         padding-bottom: 1.5em;;
-    }
-
-    .iconSkills {
-        width: 64px;
-        height: 64px;
-        opacity: 0;
-    }
+    }  
     
     .iconSkills.anim {
         animation: fromRightSide 0.5s forwards;  
@@ -167,20 +142,9 @@
     }
 
     /* Projects */
-    
-    .projects {
-        background-color: rgba(226, 204, 176, 0.6);
-        text-align: center;
-    }
-
-    .projects > h2 {
-        padding: 1.4em;
-        font-size: 2em;
-        text-transform: uppercase;
-    }
-    
+      
     .projects-container { 
-        display: flex;
+        
         flex-direction: column;
     }
     
@@ -203,23 +167,9 @@
 
     /* Contact */
 
-    .contact {
-        text-align: center;
-        background-color:rgb(154, 209, 209);
-    }
-
-    .contact p {
-        text-align: right;
-    }
-    
     .form-container {
         width: 100%;
-    }
-       
-    .form textarea{
-        padding: 1.5em;
-        height: 25vh;
-    }
+    }   
      
     /* Legals */
     

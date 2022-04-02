@@ -13,6 +13,7 @@ abbr {
 }
 
 /* Menu*/
+
 nav {
     background-color: darkslategray;
     position: fixed;
@@ -26,6 +27,7 @@ nav a {
 }
 
 /* Landing Page */
+
 .bg-img {
     display: flex;
     flex-direction: column;
@@ -42,17 +44,78 @@ nav a {
     display: inline-block;
 }
 
+#alert {
+    color: darkslategray;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Description */
+
+.description {
+    background-color: rgba(197, 202, 206, 0.8);
+}
+
+.content-description {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.content-description a:visited{
+    color: #844;
+}
+
+/* Skills */
+
+.skills {
+    text-align: center;
+    background-color:rgba(95, 136, 136, 0.5);
+}
+
+.skills > h2 {
+    padding: 1.4em;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.iconSkills {
+    width: 64px;
+    height: 64px;
+    opacity: 0;
+}
+
 /* Projects */
+
+.projects {
+    background-color: rgba(226, 204, 176, 0.6);
+    text-align: center;
+}
+
+.projects-container { 
+    display: flex;
+}
+
+.projects > h2 {
+    padding: 1.4em;
+    font-size: 2em;
+    text-transform: uppercase;
+}
 
 .projects p {
     padding-bottom: 1em;;
+}
+
+
+.content-project {
+    border: 0.2em ridge #bbb;
+    border-radius: 0.5em;
 }
 
 .content-description > p {
     padding: 1em;
 }
 
-h3:first-child{
+#dev { 
     padding-bottom: 1.5em;
     font-style: italic;
     font-size: 1.5em;
@@ -60,12 +123,34 @@ h3:first-child{
     color: darkred;
 }
 
-.infosProjects {
-
+.itemsProject h3, .itemsProject img, .itemsProject p {
     padding: 1em 0 1em 0;
 }
 
+.itemsProject h3 {
+    font-style: italic;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: darkred;
+}
+
+
 /* Contact */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+}
+
+.contact {
+    text-align: center;
+    background-color:rgb(154, 209, 209, 0.2);
+}
+
+.contact p {
+    text-align: right;
+}
 
 .contact > h2 {
     padding: 1.4em;
@@ -73,37 +158,42 @@ h3:first-child{
     text-transform: uppercase;
 }
 
-.form label {
+label {
     text-align: left;
+    padding-bottom: 0.4em;
     font-weight: bold;
 }
 
-.form input[type=text], [type=email], [type=submit] {
+input, textarea {
     padding: 1.5em;
+    border-radius: 0.5em;
+    border: 0.2em solid #bbb;
+    outline: none;
 }
 
-.form input[type=button] {
-    height: 70px;;
-}    
+textarea {
+    height: 25vh;
+}
 
-.form input[value="Tout effacer"] {
-    background-color: rgb(204, 57, 57);
+input:not([type="submit"]):focus, textarea:focus {
+    border-color: #1abc9c;
+    box-shadow: 0 0 0.5em #1abc9c;
+}
+
+input[type="button"], input[type="submit"] {
     font-weight: bold;
     color: white;
     font-size: 1em;
 }
-.form input[value="Envoyer"] {
-    background-color: rgb(49, 156, 94);
-    font-weight: bold;
-    color: white;
-    font-size: 1em;
+
+input[type="button"] {
+    background-color: #bc1a42;
 }
 
-.form {
-    display: flex;
-    flex-direction: column;
-    padding: 1.5em;
+input[type="submit"] {
+    background-color: #1abc9c;
 }
+
 
 /*Legals*/
 

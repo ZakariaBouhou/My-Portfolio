@@ -19,7 +19,7 @@ require __DIR__. '/../../data.php';
 
                 <p class="infosProjects"><?=$value['Description']?></p>
 
-                <p><?=$value['Description complémentaire']?></p>
+                <?php !empty($value['Description complémentaire']) ? '<p>'.$value['Description complémentaire'].'</p>' : '' ?>             
 
                 <p><a href="<?=$value['Lien1']?>">Lien du repo </a></p>
 
