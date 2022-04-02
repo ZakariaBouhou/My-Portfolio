@@ -21,7 +21,7 @@
                 <textarea name="message" id="message" placeholder="Saisissez votre message" required></textarea>
             </div>
             <div class="form">
-                <input type="button" value="Tout effacer">
+                <input type="button" value="Tout effacer" name="effacer">
             </div>
             <div class="form">
                 <input type="submit" value="Envoyer" name="envoyer">
