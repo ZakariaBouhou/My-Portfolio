@@ -1,23 +1,40 @@
-    <?php require __DIR__ . '../../../mail.php';?>
+    
 
     <div class="contact" id="contact">
         <h2>Contact</h2>
         <form action="" method="POST" class="form-container" id="theForm">
             <div class="form">
                 <p>Tous les champs sont obligatoires.</p>
-                <label for="name"><abbr>*</abbr>Nom</label>
+                <label for="name"><abbr>*</abbr>Nom</label>            
+                <?php
+                    if (isset($_GET['error']) && $_GET['error'] == 'name') { ?>
+                        <small>Le nom doit comporter au minimum 2 caractères</small>
+                <?php } ?>             
                 <input type="text" name="name" id="name" placeholder="Votre nom et/ou organisation" required pattern="^[A-Za-z0-9 '-]+$">
             </div>
             <div class="form">
                 <label for="email"><abbr>*</abbr>Email</label>
+                <?php
+                    if (isset($_GET['error']) && $_GET['error'] == 'email') {
+                        echo '<small>'.$_GET['message'].'</small>';
+                    }
+                 ?>
                 <input type="email" name="email" id="email" placeholder="Votre email" required>
             </div>
             <div class="form">
                 <label for="object"><abbr>*</abbr>Objet</label>
+                <?php
+                    if (isset($_GET['error']) && $_GET['error'] == 'object') { ?>
+                        <small>L'objet doit comporter au minimum 2 caractères</small>
+                <?php } ?>             
                 <input type="text" name="object" id="object" placeholder="L'objet de votre message" required>
             </div>
             <div class="form">
                 <label for="message"><abbr>*</abbr>Message</label>
+                <?php
+                    if (isset($_GET['error']) && $_GET['error'] == 'message') { ?>
+                        <small>Le message doit comporter au minimum 2 caractères</small>
+                <?php } ?>             
                 <textarea name="message" id="message" placeholder="Saisissez votre message" required></textarea>
             </div>
             <div class="form">

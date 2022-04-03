@@ -194,6 +194,11 @@ input[type="submit"] {
     background-color: #1abc9c;
 }
 
+small {
+    color: red;
+    text-align: left;
+    padding-bottom: 0.4em;
+}
 
 /*Legals*/
 

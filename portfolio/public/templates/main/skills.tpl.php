@@ -1,8 +1,4 @@
-<?php
 
-require __DIR__. '/../../data.php';
-
-?>
 <div class="skills" id="skills">
     <h2>Compétences</h2>
     <div class="tool-container">
