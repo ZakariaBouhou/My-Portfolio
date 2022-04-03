@@ -1,7 +1,4 @@
-<?php
 
-require __DIR__. '/../../data.php';
-?>
 <div class="projects" id="projects">
     <h2>Réalisations</h2>
     <div class="projects-container">
@@ -12,7 +9,7 @@ require __DIR__. '/../../data.php';
                 <h3><?=$value['Titre']?></h3>
          
                 <?php if (!empty($value['Technos'])): ?>
-                    <?php  foreach($value['Technos'] as $techno ): ?>
+                    <?php foreach ($value['Technos'] as $techno ): ?>
                     <img src="<?=  $techno ?>" alt="langages utilisés" class="iconSkills">
                     <?php endforeach; ?>
                 <?php endif; ?>
