@@ -4,7 +4,6 @@
 require __DIR__ . '/vendor/autoload.php';
 
 
-//require __DIR__. '../../public/data.php';
 require __DIR__ . '/templates/header.tpl.php';
 require __DIR__ . '/templates/main/home.tpl.php';
 require __DIR__ . '/templates/main//about.tpl.php';

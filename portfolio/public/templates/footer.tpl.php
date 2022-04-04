@@ -7,7 +7,7 @@
         </footer>
     </div>
     <!-- <script src="assets/js/alertAfterSubmitting.js"></script> -->
-    <script src="assets/js/alertAfterSubmit.js"></script>
+    <!-- <script src="assets/js/flashMessage.js"></script> -->
     <script src="assets/js/deleteAllValues.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="assets/js/firstnameLetterAnimation.js"></script>
