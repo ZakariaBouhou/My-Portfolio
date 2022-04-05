@@ -52,6 +52,15 @@ $projects = [
         'Lien1' => 'https://github.com/ZakariaBouhou/ShareYourFiles',
         'Lien2' => 'https://www.youtube.com/watch?v=9r3zitD5gn0'
     ],
+
+    'Projet 6' => [
+        'Titre' => 'Espace membre Netflix',
+        'Technos' => ['assets/images/logo/php.png'],
+        'Description' => 'Création d\'un espace membre Netflix avec système d\'inscription et de login/logout',
+        'Description complémentaire' => 'Utilisation des sessions et cookies',
+        'Lien1' => 'https://github.com/ZakariaBouhou/Netflix-AccountMember',
+        'Lien2' => ''
+    ],
     
 ];
 
