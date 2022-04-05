@@ -13,16 +13,16 @@ $projects = [
     'Projet 1' => [
         'Titre' => 'Projet de fin de formation',
         'Technos' => ['assets/images/logo/symfony.png', 'assets/images/logo/mysql.png', 'assets/images/logo/js.png'],
-        'Description' => 'Réalisation en groupe d\'un site complet responsive sur le thème de la protection de l\'environnement (Conception d\'un cahier des charges, des BDD, de la maquette du site, Méthodologie Agile, répartition des roles',
-        'Description complémentaire' => '',
+        'Description' => 'Réalisation en groupe d\'un site complet responsive sur le thème de la protection de l\'environnement',
+        'Description complémentaire' => 'Conception d\'un cahier des charges, de la BDD(MCD, MLD, MPD), du wireframe, projet réalisé en méthode Agile',
         'Lien1' => 'https://github.com/ZakariaBouhou/projet-ctw',
         'Lien2' => 'https://youtu.be/mQki_QvYDJ0?t=1440'
     ],
     'Projet 2' => [
         'Titre' => 'Forum Apex Legends V1',
         'Technos' => ['assets/images/logo/symfony.png', 'assets/images/logo/mysql.png', 'assets/images/logo/js.png'],
-        'Description' => 'Création d\'un forum francophone autour du jeu Apex Legends. Système d\'inscription et d\'authentification, stats globales, CRUD, Back-Office, sécurité et controles d\'accès',
-        'Description complémentaire' => '',
+        'Description' => 'Création d\'un forum francophone autour du jeu Apex Legends.',
+        'Description complémentaire' => 'Système d\'inscription et d\'authentification, stats globales, CRUD, Back-Office, sécurité et controles d\'accès',
         'Lien1' => 'https://github.com/ZakariaBouhou/Apex-Legends-Forum',
         'Lien2' => 'https://www.youtube.com/watch?v=G1NN3ZND8CA'
     ],
@@ -55,7 +55,7 @@ $projects = [
 
     'Projet 6' => [
         'Titre' => 'Espace membre Netflix',
-        'Technos' => ['assets/images/logo/php.png'],
+        'Technos' => ['assets/images/logo/php.png', 'assets/images/logo/mysql.png'],
         'Description' => 'Création d\'un espace membre Netflix avec système d\'inscription et de login/logout',
         'Description complémentaire' => 'Utilisation des sessions et cookies',
         'Lien1' => 'https://github.com/ZakariaBouhou/Netflix-AccountMember',

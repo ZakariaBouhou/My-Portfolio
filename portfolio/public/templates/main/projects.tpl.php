@@ -16,7 +16,7 @@
 
                 <p class="infosProjects"><?=$value['Description']?></p>
 
-                <?php !empty($value['Description complémentaire']) ? '<p>'.$value['Description complémentaire'].'</p>' : '' ?>             
+                <?= !empty($value['Description complémentaire']) ? '<p>'.$value['Description complémentaire'].'</p>' : '' ?>             
 
                 <p><a href="<?=$value['Lien1']?>">Lien du repo </a></p>
 
