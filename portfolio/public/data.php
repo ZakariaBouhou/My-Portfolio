@@ -47,7 +47,7 @@ $projects = [
     'Projet 5' => [
         'Titre' => 'Share Your Pictures',
         'Technos' => ['assets/images/logo/php.png'],
-        'Description' => 'Projet qui permet le partage d\'images en ligne',
+        'Description' => 'Projet de partage d\'images en ligne',
         'Description complémentaire' => '',
         'Lien1' => 'https://github.com/ZakariaBouhou/ShareYourFiles',
         'Lien2' => 'https://www.youtube.com/watch?v=9r3zitD5gn0'
