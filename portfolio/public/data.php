@@ -59,7 +59,7 @@ $projects = [
         'Description' => 'Création d\'un espace membre Netflix avec système d\'inscription et de login/logout',
         'Description complémentaire' => 'Utilisation des sessions et cookies',
         'Lien1' => 'https://github.com/ZakariaBouhou/Netflix-AccountMember',
-        'Lien2' => ''
+        'Lien2' => 'https://youtu.be/yuHZfLPf6hw'
     ],
     
 ];
