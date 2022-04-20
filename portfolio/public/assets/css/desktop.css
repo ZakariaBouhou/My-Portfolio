@@ -97,13 +97,18 @@
 
     /* Projects */
 
-    .projects {
-        
+    .projects {       
         padding-bottom: 2.8em;
     }
 
+    .projects-container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
     .content-project {
-        width: 50%;
+        width: 25%;
+        
     }
 
     .content-project:hover {

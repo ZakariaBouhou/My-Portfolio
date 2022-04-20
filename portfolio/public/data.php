@@ -21,7 +21,7 @@ $projects = [
     'Projet 2' => [
         'Titre' => 'Forum Apex Legends V1',
         'Technos' => ['assets/images/logo/symfony.png', 'assets/images/logo/mysql.png', 'assets/images/logo/js.png'],
-        'Description' => 'Création d\'un forum francophone autour du jeu Apex Legends.',
+        'Description' => 'Création d\'un forum francophone autour du jeu Apex Legends',
         'Description complémentaire' => 'Système d\'inscription et d\'authentification, stats globales, CRUD, Back-Office, sécurité et controles d\'accès',
         'Lien1' => 'https://github.com/ZakariaBouhou/Apex-Legends-Forum',
         'Lien2' => 'https://www.youtube.com/watch?v=G1NN3ZND8CA'
@@ -60,6 +60,24 @@ $projects = [
         'Description complémentaire' => 'Utilisation des sessions et cookies',
         'Lien1' => 'https://github.com/ZakariaBouhou/Netflix-AccountMember',
         'Lien2' => 'https://youtu.be/yuHZfLPf6hw'
+    ],
+
+    'Projet 7' => [
+        'Titre' => 'Le Juste Prix',
+        'Technos' => ['assets/images/logo/js.png'],
+        'Description' => 'Petit jeu dans lequel tu dois deviner le juste prix',
+        'Description complémentaire' => 'Ecouteurs d\'évènements, ajout/modification/suppression d\élements',
+        'Lien1' => 'https://github.com/ZakariaBouhou/Le-Juste-Prix/tree/main',
+        'Lien2' => ''
+    ],
+    
+    'Projet 8' => [
+        'Titre' => 'Punchline Generator',
+        'Technos' => ['assets/images/logo/js.png'],
+        'Description' => 'Un clic, une punchline',
+        'Description complémentaire' => 'Ecouteurs d\'évènements, génération d\'élements aléatoires',
+        'Lien1' => 'https://github.com/ZakariaBouhou/Punchline-Generator/tree/main',
+        'Lien2' => ''
     ],
     
 ];
