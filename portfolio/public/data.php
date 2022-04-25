@@ -68,7 +68,7 @@ $projects = [
         'Description' => 'Petit jeu dans lequel tu dois deviner le juste prix',
         'Description complémentaire' => 'Ecouteurs d\'évènements, ajout/modification/suppression d\élements',
         'Lien1' => 'https://github.com/ZakariaBouhou/Le-Juste-Prix/tree/main',
-        'Lien2' => ''
+        'Lien2' => 'https://www.youtube.com/watch?v=4KHeNBR8ld8&ab_channel=Dump%26Dev'
     ],
     
     'Projet 8' => [
@@ -77,7 +77,7 @@ $projects = [
         'Description' => 'Un clic, une punchline',
         'Description complémentaire' => 'Ecouteurs d\'évènements, génération d\'élements aléatoires',
         'Lien1' => 'https://github.com/ZakariaBouhou/Punchline-Generator/tree/main',
-        'Lien2' => ''
+        'Lien2' => 'https://www.youtube.com/watch?v=3_ycFbgv2_E&ab_channel=Dump%26Dev'
     ],
     
 ];
