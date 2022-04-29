@@ -13,13 +13,21 @@ liens       = document.querySelectorAll(".itemsProject > p > a");
 
 function modeSombre() {
 
+    let premiersElementsAvecLeMemeRGB = [menu, description, legals];
+    
+    premiersElementsAvecLeMemeRGB.forEach(element => {
+        element.style.backgroundColor = 'rgb(21, 24, 27)';
+    });
+    
+    let deuxiemesElementsAvecLeMemeRGB = [skills, projects, contact];
+    
+    deuxiemesElementsAvecLeMemeRGB.forEach(element => {
+        element.style.backgroundColor = 'rgb(15, 32, 48)';
+    });
+
     document.body.style.color = 'white';
 
-    menu.style.backgroundColor = 'rgb(21, 24, 27)';
-
     bgImg.style.backgroundImage = "url(../assets/images/landingDark.jpg)";
-    
-    description.style.backgroundColor = 'rgb(21, 24, 27)';
     
     liens.forEach(lien => {
         lien.style.color = 'rgb(23, 119, 209)';
@@ -27,16 +35,8 @@ function modeSombre() {
 
     document.querySelector(".content-description > p > a").style.color = 'rgb(23, 119, 209)';
     
-    skills.style.backgroundColor = 'rgb(15, 32, 48)';
-    
-    projects.style.backgroundColor = 'rgb(15, 32, 48)';
-    
     effacer.style.backgroundColor = '#581022';
     envoyer.style.backgroundColor = '#12362f';
-    
-    contact.style.backgroundColor = 'rgb(15, 32, 48)';
-    
-    legals.style.backgroundColor = 'rgb(21, 24, 27)';
     
     document.querySelector('.fas').className = 'fas fa-sun';
     texteTheme.textContent = 'Thème clair';
