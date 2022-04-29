@@ -24,6 +24,8 @@ function modeSombre() {
     liens.forEach(lien => {
         lien.style.color = 'rgb(23, 119, 209)';
     });
+
+    document.querySelector(".content-description > p > a").style.color = 'rgb(23, 119, 209)';
     
     skills.style.backgroundColor = 'rgb(15, 32, 48)';
     
