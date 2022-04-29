@@ -44,7 +44,7 @@ function modeSombre() {
 
 if(localStorage.getItem('theme')) {
     
-    if(localStorage.getItem('theme') == 'sombre') {
+    if(localStorage.getItem('theme') == 'sombre') {        
         modeSombre();
     }
     
