@@ -115,10 +115,8 @@
     }
     /* Description text */
     
-    .content-description {
-        
+    .content-description {      
         padding: 1.5em 0 1.5em 0;
-        background-color: rgba(197, 202, 206, 0.8);
     }
        
     /* Skills */
