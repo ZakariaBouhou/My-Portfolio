@@ -4,6 +4,7 @@
 require __DIR__ . '/vendor/autoload.php';
 
 
+require_once __DIR__ . '/assets/options/connexion.php';
 require __DIR__ . '/templates/header.tpl.php';
 require __DIR__ . '/templates/main/home.tpl.php';
 require __DIR__ . '/templates/main//about.tpl.php';

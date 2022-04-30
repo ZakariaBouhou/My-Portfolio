@@ -1,30 +1,38 @@
+<?php
+    $requete = $bdd->prepare('SELECT * FROM `projects`');
+    $requete->execute();
+
+    $imgAltClass = ' alt=\'langages utilisées\' class=\'iconSkills\'>';
+?>
+
 
 <div class="projects" id="projects">
     <h2>Réalisations</h2>
     <div class="projects-container">
-        <?php foreach ($projects as $key => $value): ?>
-        <div class="content-project">
-            <div class="itemsProject">
+        
+        <?php while($resultat = $requete->fetch()) { ?>
+                     
+            <div class="content-project">
+                <div class="itemsProject">
                 
-                <h3><?=$value['Titre']?></h3>
+                    <h3><?=$resultat['title']?></h3>               
          
-                <?php if (!empty($value['Technos'])): ?>
-                    <?php foreach ($value['Technos'] as $techno ): ?>
-                    <img src="<?=  $techno ?>" alt="langages utilisés" class="iconSkills">
-                    <?php endforeach; ?>
-                <?php endif; ?>
+                    <?= !empty($resultat['logo_symfony']) ? '<img src='.$resultat['logo_symfony']. $imgAltClass : '' ?>             
+                    <?= !empty($resultat['logo_php']) ? '<img src='.$resultat['logo_php']. $imgAltClass : '' ?>             
+                    <?= !empty($resultat['logo_mysql']) ? '<img src='.$resultat['logo_mysql']. $imgAltClass : '' ?>             
+                    <?= !empty($resultat['logo_javascript']) ? '<img src='.$resultat['logo_javascript']. $imgAltClass : '' ?>             
+                      
+                    <p class="infosProjects"><?=$resultat['first_describe']?></p>
 
-                <p class="infosProjects"><?=$value['Description']?></p>
-
-                <?= !empty($value['Description complémentaire']) ? '<p>'.$value['Description complémentaire'].'</p>' : '' ?>             
-
-                <p><a href="<?=$value['Lien1']?>">Lien du repo </a></p>
-
-                <?php if ($value['Lien2'] !== ''):?>
-                <p><a href="<?=$value['Lien2']?>">Démo du projet</a></p>
-                <?php endif ?>
-            </div>
-        </div>
-        <?php  endforeach ?>
+                    <?= !empty($resultat['second_describe']) ? '<p>'.$resultat['second_describe'].'</p>' : '' ?>             
+                    
+                    <p><a href="<?=$resultat['link_github']?>">Lien du repo </a></p>
+                    
+                    <?php if ($resultat['link_youtube'] !== ''):?>
+                        <p><a href="<?=$resultat['link_youtube']?>">Démo du projet</a></p>
+                    <?php endif ?>
+                </div>
+            </div>                  
+        <?php } ?>
     </div>
 </div>
