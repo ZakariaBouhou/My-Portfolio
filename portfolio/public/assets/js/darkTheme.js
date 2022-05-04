@@ -1,15 +1,17 @@
-let menu    = document.querySelector('nav'),
-bgImg       = document.querySelector('.bg-img'), 
-theme       = document.querySelector('#theme'), 
-texteTheme  = document.querySelector('#theme > span'), 
-description = document.querySelector('.description'), 
-skills      = document.querySelector('.skills'), 
-effacer     = document.querySelector('input[type=button]'), 
-envoyer     = document.querySelector('input[type=submit]'), 
-projects    = document.querySelector('.projects'), 
-contact     = document.querySelector('.contact'), 
-legals      = document.querySelector('.legals'), 
-liens       = document.querySelectorAll(".itemsProject > p > a");
+let menu        = document.querySelector('nav'),
+bgImg           = document.querySelector('.bg-img'), 
+theme           = document.querySelector('#theme'), 
+texteTheme      = document.querySelector('#theme > span'), 
+description     = document.querySelector('.description'), 
+skills          = document.querySelector('.skills'), 
+effacer         = document.querySelector('input[type=button]'), 
+envoyer         = document.querySelector('input[type=submit]'), 
+projects        = document.querySelector('.projects'), 
+contact         = document.querySelector('.contact'), 
+legals          = document.querySelector('.legals'), 
+liens           = document.querySelectorAll(".itemsProject > p > a");
+logosSymfony    = document.querySelectorAll('.iconSkills');
+
 
 function modeSombre() {
 
@@ -40,6 +42,13 @@ function modeSombre() {
     
     document.querySelector('.fas').className = 'fas fa-sun';
     texteTheme.textContent = 'Thème clair';
+
+    logosSymfony.forEach(logo => {
+
+        if(logo.currentSrc == 'http://localhost:8080/assets/images/logo/symfony.png') {
+            logo.setAttribute('src', 'http://localhost:8080/assets/images/logo/symfony2.png');
+        }  
+    });
     
     localStorage.setItem('theme', 'sombre');
 }
@@ -66,6 +75,13 @@ theme.addEventListener('click', () => {
 
         liens.forEach(lien => {
             lien.removeAttribute('style');
+        });
+
+        logosSymfony.forEach(logo => {
+
+            if(logo.currentSrc == 'http://localhost:8080/assets/images/logo/symfony2.png') {
+                logo.setAttribute('src', 'http://localhost:8080/assets/images/logo/symfony.png');
+            }  
         });
 
         texteTheme.textContent = 'Thème sombre';

@@ -1,6 +1,6 @@
 Options -Indexes
 
-ErrorDocument 403 "Vous n'avez pas la permission d'accéder à cette ressource."
+ErrorDocument 403 "Vous n'avez pas la permission d'accï¿½der ï¿½ cette ressource."
 
 RewriteEngine On
 RewriteCond %{SERVER_PORT} 80

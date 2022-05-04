@@ -46,7 +46,7 @@
             }
             
                        
-            $to = 'admin@zak-bouhou.com';
+            $to = 'contact@zak-bouhou.com';
             $headers = [
                 "From" => $_POST['email']
             ];

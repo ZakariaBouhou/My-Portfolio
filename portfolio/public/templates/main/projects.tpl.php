@@ -22,9 +22,9 @@
                     <?= !empty($resultat['logo_mysql']) ? '<img src='.$resultat['logo_mysql']. $imgAltClass : '' ?>             
                     <?= !empty($resultat['logo_javascript']) ? '<img src='.$resultat['logo_javascript']. $imgAltClass : '' ?>             
                       
-                    <p class="infosProjects"><?=$resultat['first_describe']?></p>
+                    <p class="infosProjects describeHidden"><?=$resultat['first_describe']?></p>
 
-                    <?= !empty($resultat['second_describe']) ? '<p>'.$resultat['second_describe'].'</p>' : '' ?>             
+                    <?= !empty($resultat['second_describe describeHidden']) ? '<p>'.$resultat['second_describe'].'</p>' : '' ?>             
                     
                     <p><a href="<?=$resultat['link_github']?>">Lien du repo </a></p>
                     

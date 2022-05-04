@@ -1,6 +1,5 @@
 <?php 
     require __DIR__ . '../../mail.php';
-    require __DIR__. '../../data.php';
 ?>
 
 <!DOCTYPE html>
