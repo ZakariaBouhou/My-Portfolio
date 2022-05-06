@@ -1,4 +1,4 @@
-# My Portfolio
+# Portfolio
 
 Welcome to my Portfolio. <br/>
 
@@ -9,6 +9,7 @@ Skills
 Side-projects
 Form contact <br/>
 Using js Observer & css to animate elements
+Dark theme
 
 ## Language 
 
