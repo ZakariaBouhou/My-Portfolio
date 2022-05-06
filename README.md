@@ -4,11 +4,11 @@ Welcome to my Portfolio. <br/>
 
 ## Features
 
-Small presentation
-Skills
-Side-projects
+Small presentation <br/>
+Skills <br/>
+Side-projects <br/>
 Form contact <br/>
-Using js Observer & css to animate elements
+Using js Observer & css to animate elements <br/>
 Dark theme
 
 ## Language 
