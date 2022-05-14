@@ -1,0 +1,109 @@
+@media screen and (min-width: 768px) {    
+
+    /* Landing page */
+
+    .bg-img {
+        justify-content: space-around;
+
+        .about {
+            background-color:rgba(47,79,79, 0.3);
+            padding: 1em;
+            text-align: center;
+            margin: 0 auto;
+            width: 50%;
+            font-size: 2.3em;
+            font-style: italic;
+
+            #firstname, #job {   
+                padding-bottom: 1em;
+                font-size : 0.8em;
+            }
+            
+            #city {
+                padding: 0;
+                font-size : 0.8em;
+            }
+        }
+    }
+
+    /* Description text */
+
+    .content-description {     
+        padding: 1.5em;
+        width: 50%;
+    }
+
+    /* Skills */
+
+    .skills {
+        padding-bottom: 1.4em;
+        
+        .tool-container {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+
+    .skillName {
+        font-weight: bold;
+    }
+
+    
+    .iconSkills.anim {
+        animation: fromRightSide 0.8s forwards;  
+        animation-delay: 1.5s;
+    }
+
+    .skillName.anim {
+        animation: fromLeftSide 2s forwards;
+    }
+
+    /* Projects */
+
+    .projects {       
+        padding-bottom: 2.8em;
+
+        .projects-container {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    
+        .content-project {
+            width: 25%;
+            
+            &:hover {
+                border-color: #1abc9c;
+                box-shadow: 0 0 0.4em #1abc9c;
+            }
+        }
+    }
+
+    .itemsProject.anim {
+        animation: fromLeftSide 2s;
+
+        h3 {
+            padding-top: 1.5em;
+        }
+    }
+
+    /* Contact */
+
+    .form-container {
+        margin: 0 auto;
+        width: 50%;
+
+        input[type="button"], [type="submit"] {
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+
+    /* Legals */
+ 
+    .legals img {
+        width: 2em;
+        height: 2em;
+        padding-bottom: 1em;
+    }
+
+}
