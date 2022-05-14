@@ -1,0 +1,249 @@
+@import 'header';
+@import 'mobile';
+@import 'desktop';
+
+@mixin googleFonts($nom) {
+    @import url('https://fonts.googleapis.com/css2?family=' + $nom + '&display=swap');
+}
+
+@include googleFonts('Poppins');
+
+@mixin textareaAndInputs() {
+    padding: 1.5em;
+    border-radius: 0.5em;
+    border: 0.2em solid #bbb;
+    outline: none;
+}
+
+body {
+    font-family: 'Poppins', 'Open Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Landing Page */
+
+.bg-img {
+    display: flex;
+    flex-direction: column;
+    background-image: url("../images/landing2.jpg");
+    background-size: cover;
+    height: 720px;
+}
+
+#firstname, #job, #city {
+    font-weight: bold;
+    
+    @each $name in Firstname, Job, City {
+        .each#{$name}Letter {
+            display: inline-block;          
+        }
+    }
+}
+
+/* Description */
+
+.description {
+    background-color: rgba(197, 202, 206, 0.8);
+    
+    .content-description {
+        text-align: center;
+        margin: 0 auto;
+        
+        p {
+            padding: 1em;
+        }
+        
+        #dev { 
+            padding-bottom: 1.5em;
+            font-style: italic;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: darkred;
+        }
+    }
+}
+
+
+/* Skills */
+
+.skills {
+    text-align: center;
+    background-color:rgba(95, 136, 136, 0.5);
+    
+    h2 {
+        padding: 1.4em;
+        font-size: 2em;
+        text-transform: uppercase;
+    }
+}
+
+.iconSkills {
+    width: 64px;
+    height: 64px;
+    opacity: 0;
+}
+
+/* Projects */
+
+.projects {
+    background-color: rgba(226, 204, 176, 0.6);
+    text-align: center;
+    
+    h2 {
+        padding: 1.4em;
+        font-size: 2em;
+        text-transform: uppercase;
+    }
+    
+    p {
+        padding-bottom: 1em;;
+    }
+    .projects-container { 
+        display: flex;
+    }
+    .content-project {
+        border: 0.2em ridge #bbb;
+        border-radius: 0.5em;
+    }
+}
+
+
+.itemsProject {
+  
+    p, img {       
+        padding: 1em;
+    }
+    
+    h3 {
+        font-style: italic;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: darkred;
+    }
+}
+
+
+/* Contact */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+
+    small {
+        color: red;
+        text-align: left;
+        padding-bottom: 0.4em;
+    }
+}
+
+.contact {
+    text-align: center;
+    background-color:rgb(154, 209, 209, 0.2);
+    
+    p {
+        text-align: right;
+    }
+    
+    h2 {
+        padding: 1.4em;
+        font-size: 2em;
+        text-transform: uppercase;
+    }
+
+    #success {
+        text-align: center;
+        font-weight: bold;
+        color: #1abc9c;
+    }
+    
+}
+
+
+label {
+    text-align: left;
+    padding-bottom: 0.4em;
+    font-weight: bold;
+
+    abbr {
+        color: red;
+    }
+}
+
+input {
+    @include textareaAndInputs();
+}
+
+input:not([type="submit"]):focus {
+    border-color: #1abc9c;
+    box-shadow: 0 0 0.5em #1abc9c;
+}
+
+input[type="button"], [type="submit"] {
+    font-weight: bold;
+    color: white;
+    font-size: 1em;
+
+    &[type="button"] {
+        background-color: #bc1a42;
+    }
+
+    &[type="submit"] {
+        background-color: #1abc9c;
+    }
+}
+
+textarea {
+    @include textareaAndInputs();
+    height: 25vh;
+
+    &:focus {
+        border-color: #1abc9c;
+        box-shadow: 0 0 0.5em #1abc9c;
+    }
+}
+
+/*Legals*/
+
+.legals {
+    background-color: $bgColorMenuAndFooter;
+    text-align: center;
+
+    p {
+        padding-bottom: 1em;
+    }
+    
+    &:nth-child(1) {
+        color: white;
+        padding-top: 1em;
+    }
+}
+
+/*Animations*/
+
+@keyframes fromLeftSide {
+    from {
+        transform: translateX(-300px);
+        opacity: 0
+    }
+    
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@keyframes fromRightSide {
+    from {
+        transform: translateX(5em);
+        opacity: 0
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
