@@ -14,7 +14,7 @@ Dark theme
 ## Language 
 
 Back : PHP <br/>
-Front : JavaScript, CSS <br/>
+Front : JavaScript, SCSS <br/>
 
 ## Contact
 
