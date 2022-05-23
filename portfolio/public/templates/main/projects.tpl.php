@@ -24,10 +24,12 @@
                       
                     <p class="infosProjects describeHidden"><?=$resultat['first_describe']?></p>
 
-                    <?= !empty($resultat['second_describe describeHidden']) ? '<p>'.$resultat['second_describe'].'</p>' : '' ?>             
+                    <?= !empty($resultat['second_describe describeHidden']) ? '<p>'.$resultat['second_describe'].'</p>' : '' ?>                                              
                     
-                    <p><a href="<?=$resultat['link_github']?>">Lien du repo </a></p>
-                    
+                    <?php if ($resultat['link_github'] !== ''):?>
+                        <p><a href="<?=$resultat['link_github']?>">Lien du repo</a></p>
+                    <?php endif ?>
+
                     <?php if ($resultat['link_youtube'] !== ''):?>
                         <p><a href="<?=$resultat['link_youtube']?>">Démo du projet</a></p>
                     <?php endif ?>
