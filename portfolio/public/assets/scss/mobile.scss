@@ -1,91 +1,46 @@
 @media screen and (max-width: 767px) {  
-    /* Landing page */
-    
-    .bg-img {
-        justify-content: space-evenly;
-        background-position-x: 35%;
 
-        .about {
-            background-color:rgba(47,79,79, 0.3);
-            padding: 1em;
-            text-align: center;
-            font-size: 2em;
-            font-style: italic;
+  // Toggle theme button
+  .checkbox {
+    opacity: 0;
+    position: absolute;
+    }
 
-            #firstname, #job, #city {
-                padding-bottom: 0.8em;
-            }
-        
-            #city {
-                padding-bottom: 0;
-            }
-        }
+    .label {
+      width: 2.5em;
+      background-color:#EDEDED;
+      display: flex;
+      border-radius:50px;
+      align-items: center;
+      justify-content: space-around;
+      padding: 5px;
+      position: relative;
+      transform: scale(1.5);
+      margin-right: 2em;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .ball {
+      width: 25px;
+      height: 25px;
+      background-color: white;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      border-radius: 50%;
+      transition: transform 0.2s linear;
+    }
+
+    /*  target the elemenent after the label*/
+    .checkbox:checked + .label .ball{
+      transform: translateX(20px);
+    }
+
+    .fa-moon, .fa-sun {
+      color: black;
+      font-size: x-small;
+      z-index: 1;
     }
     
-    /* Description text */
-    
-    .content-description {      
-        padding: 1.5em 0 1.5em 0;
-    }
-       
-    /* Skills */
-    
-    .tools {
-        p {
-            font-size: 1.5em;
-            padding-bottom: 0;
-        }
-        img {
-            padding-bottom: 1.5em;;
-        }  
-        
-    }
-    .iconSkills.anim {
-        animation: fromRightSide 0.5s forwards;  
-        animation-delay: 1s;
-    }
-    
-    .skillName.anim {
-        animation: fromLeftSide 1s;
-    }
-
-    /* Projects */
-      
-    .projects-container {        
-        flex-direction: column;
-
-        h3 {
-            padding-top: 1.5em;
-        }    
-
-        .content-project {
-            border: 1px ridge rgba(0, 0, 0, 0.404);
-        }
-    }
-    
-    .itemsProject a:visited {
-        color: #844;  
-        font-weight: bold;
-    }
-
-    .itemsProject.anim {
-        animation: fromLeftSide 1s;
-
-        .describeHidden {
-            display: none;
-        }
-    }
-
-    /* Contact */
-
-    .form-container {
-        width: 100%;
-    }   
-     
-    /* Legals */
-    
-    .legals {      
-        padding: 1.5em;
-    }
-
 }

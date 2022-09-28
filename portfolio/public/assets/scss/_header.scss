@@ -1,8 +1,8 @@
 @import 'variables';
 
 @mixin iconBurgerMenu() {
-    background: white;
     content: '';
+    background: black;
     display: block;
     height: 100%;
     position: absolute;
@@ -11,13 +11,20 @@
 }
 
 nav {
-    background-color: $bgColorMenuAndFooter;
+    background-color: $mainBgColorInThemeLight;
     position: fixed;
     width: 100%;
     z-index: 1;
+    border-bottom: 1px solid $textColor;
+
+    .menu {
+        &:last-child {
+            color: $secondaryColor;
+        }
+    }
     
     a {
-        color: white;
+        color: $textColor;
         text-decoration: none;
     }
 }
@@ -26,8 +33,22 @@ nav {
     /*Menu */
   
     nav {
-        .logo {
-            float: left;
+
+        display: flex;
+        justify-content: space-between;
+
+        .button-Container {
+            display: flex;
+            align-items: center;
+
+            .burger {
+                width: 3em;
+            }
+        }
+        a {
+            //float: left;
+            color: $secondaryColor;
+            font-weight: bold;
         }
         .menu {
             clear: both;
@@ -36,7 +57,7 @@ nav {
         }
         .menu-btn {
             display: none;
-
+            
             &:checked ~ .menu {
                 max-height: 290px;
             }
@@ -44,10 +65,10 @@ nav {
             &:checked ~ .menu-icon:not(.steps) .navicon:after {
                 top: 0;
             }
-
+            
             &:checked ~ .menu-icon .navicon {
                 background: transparent;
-
+                
                 &:before {
                     transform: rotate(-45deg);
                 }
@@ -57,11 +78,12 @@ nav {
             } 
         }
         .menu-icon {
-            float: right;
+            //float: right;
             padding: 1.7em 1.4em 1.8em 1.4em;
+            cursor: pointer;
             
             .navicon {
-                background: white;
+                background: black;
                 display: block;
                 height: 2px;
                 position: relative;
@@ -83,10 +105,6 @@ nav {
             padding: 0;
             overflow: hidden;   
         }
-        a {
-            display: block;
-            padding: 1.2em;
-        }
     }          
 
 }
@@ -96,13 +114,16 @@ nav {
     nav {
         display: flex;
         justify-content: space-between;
+        //margin-left: 1.5rem;
+        //margin-right: 1.5rem;
 
         ul {   
-            margin: 1em;
+            margin: 1.5em;
         }
         
         .menu {
             display: flex;
+            
 
             a {
                 padding-left: 1em;
@@ -110,7 +131,7 @@ nav {
         }
 
         a {
-            font-size: 1.4em;
+            //font-size: 1.4em;
 
             &:hover { 
                 color: rgb(247, 139, 31);

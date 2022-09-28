@@ -18,17 +18,25 @@
     <div class="container">
         <header>
             <nav>
-                <ul class="logo">
-                    <a href="#home">Accueil</a>
-                </ul>
-                <input class="menu-btn" type="checkbox" id="menu-btn"/>
-                <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-                <ul class="menu">
-                    <li><a href="#describe">A propos</a></li>
+                <a href="#home">Zakaria Bouhou</a>
+                <div class="button-Container">
+                    <div class="themeToggleButton">
+                        <input type="checkbox" class="checkbox" id="checkbox">
+                        <label for="checkbox" class="label">
+                            <i class="fas fa-moon"></i>
+                            <i class='fas fa-sun'></i>
+                            <div class='ball'></div>
+                        </label>
+                    </div>
+                    <div class="burger">
+                        <input class="menu-btn" type="checkbox" id="menu-btn"/>
+                        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+                    </div>
+                </div>
+                <!-- <ul class="menu">
+                    <li><a href="#describe">Projets</a></li>
                     <li><a href="#skills">Compétences</a></li>
-                    <li><a href="#projects">Réalisations</a></li>
-                    <li><a href="assets/cv/cvdev.pdf">Mon CV</a></li>
                     <li><a href="#contact">Contact</a></li>
-                </ul>
+                </ul> -->
             </nav>
         </header>
