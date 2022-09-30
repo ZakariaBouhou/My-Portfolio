@@ -33,10 +33,10 @@
                         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
                     </div>
                 </div>
-                <!-- <ul class="menu">
+                <ul class="menu">
                     <li><a href="#describe">Projets</a></li>
                     <li><a href="#skills">Compétences</a></li>
                     <li><a href="#contact">Contact</a></li>
-                </ul> -->
+                </ul>
             </nav>
         </header>

@@ -15,16 +15,66 @@ nav {
     position: fixed;
     width: 100%;
     z-index: 1;
-    border-bottom: 1px solid $textColor;
+    box-shadow: 0px 2px 4px rgba(236, 236, 236, 1);
+
+    .button-Container {
+        
+        .themeToggleButton {
+            // Toggle theme button
+            .checkbox {
+                opacity: 0;
+                position: absolute;
+                }
+
+                .label {
+                width: 2.5em;
+                background-color:#EDEDED;
+                display: flex;
+                border-radius:50px;
+                align-items: center;
+                justify-content: space-around;
+                padding: 5px;
+                position: relative;
+                transform: scale(1.5);
+                margin-right: 2em;
+                height: 20px;
+                cursor: pointer;
+                }
+
+                .ball {
+                width: 25px;
+                height: 25px;
+                background-color: white;
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                border-radius: 50%;
+                transition: transform 0.2s linear;
+                }
+
+                /*  target the elemenent after the label*/
+                .checkbox:checked + .label .ball{
+                transform: translateX(20px);
+                }
+
+                .fa-moon, .fa-sun {
+                color: black;
+                font-size: x-small;
+                z-index: 1;
+            }
+        }
+    }
 
     .menu {
+
         &:last-child {
             color: $secondaryColor;
         }
     }
     
     a {
-        color: $textColor;
+        color: $secondaryColor;
+        font-weight: bold;
         text-decoration: none;
     }
 }
@@ -45,12 +95,8 @@ nav {
                 width: 3em;
             }
         }
-        a {
-            //float: left;
-            color: $secondaryColor;
-            font-weight: bold;
-        }
         .menu {
+            display: none;
             clear: both;
             max-height: 0;
             transition: max-height .2s ease-out;
@@ -105,7 +151,47 @@ nav {
             padding: 0;
             overflow: hidden;   
         }
-    }          
+    }   
+    
+    .isChecked {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        top: 10%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        
+        li {
+            padding: 1em;
+            //font-weight: bold;
+            
+            &:not(:last-child) {
+                color: $textColor;        
+            }
+
+            &:last-child {
+                color: $secondaryColor;
+            }
+            
+            a {
+                text-decoration: none;
+                font-size: 1.2em;
+
+                &:visited {
+                    color: inherit;
+                }
+                
+
+                &:hover {
+                    color: $secondaryColor;
+                    transition-duration: 0.2s;
+                }
+                
+            }
+        }
+
+    }
 
 }
 
