@@ -37,6 +37,7 @@
                     <li><a href="#describe">Projets</a></li>
                     <li><a href="#skills">Compétences</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a class="button-send" href="#"></a></li>
                 </ul>
             </nav>
         </header>

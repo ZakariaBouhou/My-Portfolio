@@ -27,6 +27,7 @@ nav {
                 }
 
                 .label {
+
                 width: 2.5em;
                 background-color:#EDEDED;
                 display: flex;
@@ -39,6 +40,7 @@ nav {
                 margin-right: 2em;
                 height: 20px;
                 cursor: pointer;
+
                 }
 
                 .ball {
@@ -46,7 +48,7 @@ nav {
                 height: 25px;
                 background-color: white;
                 position: absolute;
-                top: 2px;
+                //top: 2px;
                 left: 2px;
                 border-radius: 50%;
                 transition: transform 0.2s linear;
@@ -54,7 +56,7 @@ nav {
 
                 /*  target the elemenent after the label*/
                 .checkbox:checked + .label .ball{
-                transform: translateX(20px);
+                transform: translateX(21px);
                 }
 
                 .fa-moon, .fa-sun {
@@ -117,9 +119,11 @@ nav {
                 
                 &:before {
                     transform: rotate(-45deg);
+                    background-color: $secondaryColor;
                 }
                 &:after {
                     transform: rotate(45deg);
+                    background-color: $secondaryColor;
                 }
             } 
         }
@@ -157,7 +161,7 @@ nav {
         position: absolute;
         margin-left: auto;
         margin-right: auto;
-        top: 10%;
+        top: 13%;
         left: 0;
         right: 0;
         text-align: center;
@@ -170,7 +174,7 @@ nav {
                 color: $textColor;        
             }
 
-            &:last-child {
+            &:nth-child(3) {
                 color: $secondaryColor;
             }
             
@@ -189,6 +193,31 @@ nav {
                 }
                 
             }
+
+            .button-send {
+                border-radius: 9999px;
+                position: relative;
+                letter-spacing: 0.025em;
+                --tw-text-opacity: 1;
+                color: rgba(255, 255, 255, var(--tw-text-opacity));
+                font-weight: 700;
+                display: inline-block;
+                line-height: 1.375;
+                font-size: 1rem;
+                line-height: 1.5rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                padding-top: .5rem;
+                padding-bottom: .6rem;
+                background-image: linear-gradient(90deg,#009bff,#0062ff);
+                box-shadow: 0 2px 8px 0 rgba(0,34,255,.08),0 2px 8px 0 rgba(0,11,80,.12);
+                z-index: 1;
+
+                &::before {
+                    content: 'Envoyer un message';
+                    color: white;
+                }
+            }
         }
 
     }
@@ -205,6 +234,7 @@ nav {
 
         ul {   
             margin: 1.5em;
+            
         }
         
         .menu {
