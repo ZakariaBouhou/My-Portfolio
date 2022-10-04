@@ -18,7 +18,7 @@
     <div class="container">
         <header>
             <nav>
-                <a href="#home">Zakaria Bouhou</a>
+                <a id="home" href="#home">Zakaria Bouhou</a>
                 <div class="button-Container">
                     <div class="themeToggleButton">
                         <input type="checkbox" class="checkbox" id="checkbox">
@@ -34,9 +34,9 @@
                     </div>
                 </div>
                 <ul class="menu">
-                    <li><a href="#describe">Projets</a></li>
-                    <li><a href="#skills">Compétences</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li class="projects"><a href="#projects">Projets</a></li>
+                    <li class="skills"><a href="#skills">Compétences</a></li>
+                    <li class="contact"><a href="#contact">Contact</a></li>
                     <li><a class="button-send" href="#"></a></li>
                 </ul>
             </nav>
