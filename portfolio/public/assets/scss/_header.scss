@@ -26,7 +26,7 @@ nav {
         color: $secondaryColor;
     }
 
-    .button-Container {
+    //.button-Container {
         
         .themeToggleButton {
             // Toggle theme button
@@ -74,7 +74,7 @@ nav {
                 z-index: 1;
             }
         }
-    }
+    //}
 
 
 
@@ -123,20 +123,30 @@ nav {
         display: flex;
         justify-content: space-between;
 
-        .button-Container {
+        //.button-Container {
             display: flex;
             align-items: center;
 
-            .burger {
-                width: 3em;
+            .burgerButton {
+                padding-right: 2em;
+            }
+        //}
+
+        #home {
+            flex-grow: 3;
+        }
+
+        .menu {
+
+            .projects, .skills, .contact {
+
+                display: none;
+                clear: both;
+                max-height: 0;
+                transition: max-height .2s ease-out;
             }
         }
-        .menu {
-            display: none;
-            clear: both;
-            max-height: 0;
-            transition: max-height .2s ease-out;
-        }
+
         .menu-btn {
             display: none;
             
@@ -288,11 +298,6 @@ nav {
             margin: 1em;
             
             li {
-
-                /* &:nth-child(1), :nth-child(2) {
-                    color: $textColor;        
-                } */
-
                 a {
                     padding-left: 1em;
                     //color: inherit;
@@ -300,17 +305,12 @@ nav {
             }
 
         }
-
-        /* a {
-            //font-size: 1.4em;
-
-            &:hover { 
-                color: rgb(247, 139, 31);
-            }
-        } */
-
         .menu-btn, .menu-icon {
             display: none;
+        }
+
+        .themeToggleButton {
+            align-self: center;
         }
     }
 

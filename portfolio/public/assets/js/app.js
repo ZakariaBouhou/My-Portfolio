@@ -1,8 +1,10 @@
 // Display menu after click on burger menu
 
-let burgerButton = document.querySelector('.burger'),
+let burgerButton = document.querySelector('.burgerButton'),
+toggleButton = document.querySelector('.themeToggleButton'),
+homeButton = document.querySelector('#home'),
 navBar = document.querySelector('nav'),
-buttonTheme = document.querySelector('.button-Container'),
+//buttonTheme = document.querySelector('.button-Container'),
 menu = document.querySelector('.menu');
 
 burgerButton.addEventListener('click', () => {
@@ -23,21 +25,9 @@ burgerButton.addEventListener('click', () => {
 
 // Desktop menu
 if (window.matchMedia("(min-width: 768px)").matches) {
-    menu.append(buttonTheme);
+    //menu.append(toggleButton);
+    navBar.insertAdjacentElement('beforeend', toggleButton);
+    homeButton.style.flexGrow = 1;
 } 
-else { 
-    //console.log(buttonTheme);
-    //buttonTheme.insertAdjacentElement('afterend', document.body);
-
-    /* if(menu.classList.contains('isChecked')) {
-
-        menu.classList.remove('isChecked');
-    }
-
-    buttonTheme.style.display = 'flex';
-    buttonTheme.style.alignItems = 'center'; */
-
-    console.log('match');
-  }
 
 
