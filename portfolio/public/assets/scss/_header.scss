@@ -24,6 +24,8 @@ nav {
 
     #home {
         color: $secondaryColor;
+        font-weight: bold;
+        font-size: 1.2em;
     }
 
     //.button-Container {
@@ -87,6 +89,8 @@ nav {
                 
                 &:hover {
                     color: $secondaryColor;
+                    transition-property: color;
+                    transition-duration: 0.5s;
                 }
             }
 
@@ -97,21 +101,10 @@ nav {
 
             a {
                 color: $secondaryColor;
-    
-                &:hover {
-                    color: $secondaryColor;
-                }
             }
         }
 
     }
-    
-
-    /* a {
-        color: $secondaryColor;
-        font-weight: bold;
-        text-decoration: none;
-    } */
     
 }
 
@@ -211,7 +204,7 @@ nav {
         text-align: center;
 
         animation-name: glissement;
-        animation-duration: 1s;
+        animation-duration: 0.5s;
 
         @keyframes glissement {
             from {
@@ -286,10 +279,11 @@ nav {
 }
 
 @media screen and (min-width: 768px) {    
-    
-    nav {
+
+  
+    nav {    
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         
         .menu {
             display: flex;
@@ -300,6 +294,7 @@ nav {
             li {
                 a {
                     padding-left: 1em;
+                    font-size: 1.2em;
                     //color: inherit;
                 }
             }
@@ -313,6 +308,7 @@ nav {
             align-self: center;
         }
     }
+     
 
 
 }
