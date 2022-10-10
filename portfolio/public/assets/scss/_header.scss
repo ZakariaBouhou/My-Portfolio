@@ -83,20 +83,21 @@ nav {
     .menu {
 
         .projects, .skills {
-
+            
             a {
                 color: $textColor;
+                transition-property: color;
+                transition-duration: 0.3s;
                 
                 &:hover {
                     color: $secondaryColor;
-                    transition-property: color;
-                    transition-duration: 0.5s;
                 }
+                
             }
 
-
+            
         }
-
+        
         .contact {
 
             a {
@@ -134,9 +135,6 @@ nav {
             .projects, .skills, .contact {
 
                 display: none;
-                clear: both;
-                max-height: 0;
-                transition: max-height .2s ease-out;
             }
         }
 
@@ -202,9 +200,10 @@ nav {
         left: 0;
         right: 0;
         text-align: center;
-
         animation-name: glissement;
         animation-duration: 0.5s;
+        background-color: white;
+        z-index: 2;
 
         @keyframes glissement {
             from {
@@ -235,6 +234,7 @@ nav {
             a {
                 text-decoration: none;
                 font-size: 1.2em;
+                transition-duration: 0.3s;
 
                 &:visited {
                     color: inherit;
@@ -243,7 +243,6 @@ nav {
 
                 &:hover {
                     color: $secondaryColor;
-                    transition-duration: 0.2s;
                 }
                 
             }

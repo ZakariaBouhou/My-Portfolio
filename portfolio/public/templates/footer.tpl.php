@@ -2,8 +2,8 @@
             
         </footer>
     </div>
-
-    <script src="../assets/js/app.js"></script>
+    
+    <script  type="module" src="../assets/js/app.js"></script>
 </body>
 
 </html>
