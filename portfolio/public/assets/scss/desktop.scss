@@ -4,7 +4,7 @@
     //about
     .home-wrapper {
         text-align: center;
-        padding:8em 5em 8em 5em;
+        padding: 8em 5em 8em 5em;
 
         * {
             margin-bottom: 1em;
@@ -13,18 +13,18 @@
 
             .first {
                 color: $textColor;
-                font-size: 1.2em;
+                font-size: 1.5em;
                 animation-name: opacity;
                 animation-duration: 2s;
             }
             
             .job {
                 opacity: 0;
-                font-size: 1.4em;
+                font-size: 1.8em;
                 font-weight: bold;
                 animation-name: opacity;
                 animation-duration: 0.5s;
-                animation-delay: 1.2s;
+                animation-delay: 1.3s;
                 animation-fill-mode: forwards;
             }
             
@@ -32,10 +32,10 @@
                 opacity: 0;
                 animation-name: opacity;
                 animation-duration: 0.5s;
-                animation-delay: 1.3s;
+                animation-delay: 1.4s;
                 animation-fill-mode: forwards;
                 color: $textColor;
-                font-size: 1.2em;
+                font-size: 1.5em;
 
                 a {
                     color: $secondaryColor;
@@ -49,7 +49,7 @@
             opacity: 0;
             animation-name: opacity;
             animation-duration: 0.5s;
-            animation-delay: 1.4s;
+            animation-delay: 1.5s;
             animation-fill-mode: forwards;
 
             .button-projects {
