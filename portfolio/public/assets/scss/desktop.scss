@@ -107,5 +107,16 @@
         }
     }
         
+    .projects-wrapper {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        //width: 80%;
+
+        .item-wrapper {
+            //width: 400px;
+            //height: 200px;
+            //width: 10rem;
+        }
+    }
 
 }

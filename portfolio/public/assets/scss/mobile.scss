@@ -97,12 +97,13 @@
     }
 
     .all-projects {
-        text-align: center;
         padding: 2em 5em 2em 5em;
 
         .projects-wrapper {
 
-            .item-wrapper {
+            flex-direction: column;
+            
+            picture {
 
                 margin-bottom: 2em;
                 
