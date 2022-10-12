@@ -19,7 +19,6 @@
         <header>
             <nav>
                 <a id="home" href="#home">Zakaria Bouhou</a>
-                <!-- <div class="button-Container"> -->
                     <div class="themeToggleButton">
                         <input type="checkbox" class="checkbox" id="checkbox">
                         <label for="checkbox" class="label">
@@ -32,7 +31,6 @@
                         <input class="menu-btn" type="checkbox" id="menu-btn"/>
                         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
                     </div>
-                <!-- </div> -->
                 <ul class="menu">
                     <li class="projects"><a href="#projects">Projets</a></li>
                     <li class="skills"><a href="#skills">Compétences</a></li>

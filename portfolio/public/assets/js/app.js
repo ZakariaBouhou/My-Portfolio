@@ -25,4 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     scrollAfterClickOnFirst2ItemsMenu();
 
+    /* let arrayTransform = Array.from(variables.menu.children),
+    contact = document.querySelector('.contact');
+    sendButton = arrayTransform[3].cloneNode(true);
+    contact.insertAdjacentElement('beforeend', sendButton);
+    console.log(document.querySelector('.contact')); */
+
 })

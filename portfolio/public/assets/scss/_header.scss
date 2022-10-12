@@ -48,7 +48,7 @@ nav {
                 padding: 5px;
                 position: relative;
                 transform: scale(1.5);
-                margin-right: 2em;
+                //margin-right: 2em;
                 height: 20px;
                 cursor: pointer;
 
@@ -97,30 +97,30 @@ nav {
 
             
         }
+
         
         .contact {
-
+            
             a {
                 color: $secondaryColor;
             }
         }
-
+        
     }
     
 }
 
 @media screen and (max-width: 767px){
     /*Menu */
-  
+    
     nav {
-
         display: flex;
         justify-content: space-between;
-
+        
         //.button-Container {
             display: flex;
             align-items: center;
-
+            
             .burgerButton {
                 padding-right: 2em;
             }
@@ -129,15 +129,21 @@ nav {
         #home {
             flex-grow: 3;
         }
-
+        
         .menu {
-
+            
             .projects, .skills, .contact {
-
+                
                 display: none;
             }
         }
-
+        
+        .themeToggleButton {
+            label {
+                margin-right: 2em;
+            }
+        
+        }
         .menu-btn {
             display: none;
             
@@ -282,6 +288,7 @@ nav {
 
   
     nav {    
+        padding: 0;
         display: flex;
         justify-content: space-evenly;
         
