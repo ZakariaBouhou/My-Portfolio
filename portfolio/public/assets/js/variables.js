@@ -6,6 +6,7 @@ navBar = document.querySelector('nav'),
 homeWrapper = document.querySelector('.home-wrapper'),
 mobile = window.matchMedia('(max-width: 767px)'),
 desktop = window.matchMedia('(min-width: 768px)'),
+toContact = document.querySelector('.right-side'),
 menu = document.querySelector('.menu');
 
-export {burgerButton, toggleButton,homeButton, divContainer, navBar, mobile, desktop, menu, homeWrapper}
+export {burgerButton, toggleButton,homeButton, divContainer, navBar, mobile, desktop, menu, homeWrapper, toContact}

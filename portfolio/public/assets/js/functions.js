@@ -5,13 +5,15 @@ export function burgerClicked () {
 
     variables.burgerButton.addEventListener('click', () => {
     
-        if (variables.burgerButton.children[0].checked) {
-
+        if (variables.burgerButton.children[0].checked) {     
+            
             variables.navBar.after(variables.menu);
             variables.menu.classList.add('isChecked');
+
         }
-        
+
         else {      
+            
             variables.menu.classList.remove('isChecked');
             variables.navBar.append(variables.menu);
         }
@@ -43,12 +45,9 @@ export function displayHomeWrapper () {
     
     variables.burgerButton.addEventListener('click', () => {
         if (variables.burgerButton.children[0].checked == true) {
-            //variables.burgerButton.children[0].checked = true;
             
             variables.homeWrapper.classList.add('hidden');
             variables.homeWrapper.classList.remove('isActive');
-            //variables.burgerButton.children[0].checked = false;
-            //variables.homeWrapper.classList.remove('hidden');
             
         }
         
@@ -166,5 +165,5 @@ animatedElements.forEach(animatedElement => {
 }
 
 export function darkTheme () {
-    
+
 }
