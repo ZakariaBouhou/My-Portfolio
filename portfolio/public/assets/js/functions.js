@@ -67,19 +67,22 @@ export function toHideAllScreen () {
 
             document.body.style.overflow = 'hidden';
             document.querySelector('main').style.display = 'none';
+            document.querySelector('footer').style.display = 'none';
         }
         
         else {      
             document.body.style.overflow = 'scroll';
             document.querySelector('main').style.display = 'block';
+            document.querySelector('footer').style.display = 'block';
         }
-
-        variables.desktop.addEventListener('change', (e) => {
         
+        variables.desktop.addEventListener('change', (e) => {
+            
             // Desktop menu
             if (e.matches) {
                 document.body.style.overflow = 'scroll';
                 document.querySelector('main').style.display = 'block';
+                document.querySelector('footer').style.display = 'block';
             } 
         })
         
@@ -132,4 +135,12 @@ export function navbarDesktop () {
             }
         } 
     })
+}
+
+// --- Twice --- \\
+export function cloneSendButton () {
+    let arrayTransform = Array.from(variables.menu.children),
+        contact = document.querySelector('.left-side'),
+        sendButton = arrayTransform[3].firstChild.cloneNode(true);
+        contact.append(sendButton);
 }

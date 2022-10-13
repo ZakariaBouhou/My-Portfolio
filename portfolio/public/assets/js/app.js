@@ -1,6 +1,6 @@
 // Display menu after click on burger menu
 import * as variables from './variables.js';
-import {burgerClicked, navbarDesktop, navbarMobile, displayHomeWrapper, toHideAllScreen, scrollAfterClickOnFirst2ItemsMenu} from './functions.js';
+import {burgerClicked, navbarDesktop, navbarMobile, displayHomeWrapper, toHideAllScreen, scrollAfterClickOnFirst2ItemsMenu, cloneSendButton} from './functions.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -25,10 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     scrollAfterClickOnFirst2ItemsMenu();
 
-    /* let arrayTransform = Array.from(variables.menu.children),
-    contact = document.querySelector('.contact');
-    sendButton = arrayTransform[3].cloneNode(true);
-    contact.insertAdjacentElement('beforeend', sendButton);
-    console.log(document.querySelector('.contact')); */
+    cloneSendButton();
+
 
 })
