@@ -1,4 +1,4 @@
-    <div class="to-contact" id="contact">
+    <div class="to-contact" id="to-contact">
         <div class="left-side">
             <h3>A la recherche d'un développeur ?</h3>
         </div>

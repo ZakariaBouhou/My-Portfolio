@@ -198,5 +198,24 @@ html {
 
     }
 
+    .anim-on {
+        //display: block;
+        animation-name: slide;
+        animation-duration: 0.5s;
+    }
+
+    @keyframes slide {
+        from {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+        
+        to {
+            transform: translateX(0);
+            opacity: 1;
+
+        }
+    }
+
 }
 
