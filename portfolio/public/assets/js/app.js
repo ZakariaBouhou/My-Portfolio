@@ -37,25 +37,19 @@ document.addEventListener('DOMContentLoaded', () => {
     let turnOn = false;
     
 
-    variables.toggleButton.addEventListener('click', () => {
+    variables.toggleButton.childNodes[3].addEventListener('click', () => {
 
-        //console.log(e.target);
-        console.log(variables.toggleButton);
-        
-        /* if (turnOn == false) {
+        if (turnOn == false) {
             head.appendChild(link);
-            console.log(turnOn);
             turnOn = true;
+            //e.stopPropagation();
         }
         
         else {
-            console.log(turnOn);
             link.remove();
             turnOn = false;
-            e.stopPropagation();
-        } */
+        }
         
-        //console.log(turnOn);
     })
 
 
