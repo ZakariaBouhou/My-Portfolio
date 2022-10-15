@@ -5,15 +5,20 @@ export function burgerClicked () {
 
     variables.burgerButton.addEventListener('click', () => {
     
-        if (variables.burgerButton.children[0].checked) {     
+        if (variables.burgerButton.children[0].checked) {    
+            
+            variables.toContact.classList.add('onMenu');
+            variables.menu.append(variables.toContact);
             
             variables.navBar.after(variables.menu);
             variables.menu.classList.add('isChecked');
-
+            
         }
-
+        
         else {      
             
+            variables.toContact.classList.remove('onMenu');
+            document.querySelector('.to-contact').append(variables.toContact);
             variables.menu.classList.remove('isChecked');
             variables.navBar.append(variables.menu);
         }
@@ -33,6 +38,9 @@ export function navbarMobile () {
             variables.divContainer.remove();
             
             if(variables.burgerButton.children[0].checked) {
+
+                variables.toContact.classList.add('onMenu');
+                variables.menu.append(variables.toContact);
                 
                 variables.menu.children[3].style.display = 'block';
                 variables.navBar.insertAdjacentElement('afterend', variables.menu);
@@ -130,6 +138,8 @@ export function navbarDesktop () {
                 variables.menu.children[3].style.display = 'none';
                 variables.toggleButton.style.marginLeft = '1em';
                 variables.divContainer.prepend(variables.menu);
+                variables.toContact.classList.remove('onMenu');
+                document.querySelector('.to-contact').append(variables.toContact);
                 
             }
         } 
