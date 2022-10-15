@@ -20,8 +20,8 @@
             <nav>
                 <a href="#main" id="home">Zakaria Bouhou</a>
                     <div class="themeToggleButton">
-                        <input type="checkbox" class="checkbox" id="checkbox">
-                        <label for="checkbox" class="label">
+                        <input class="checkbox" type="checkbox"  id="checkbox">
+                        <label class="label" for="checkbox">
                             <i class="fas fa-moon"></i>
                             <i class='fas fa-sun'></i>
                             <div class='ball'></div>

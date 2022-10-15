@@ -5,7 +5,7 @@ export function burgerClicked () {
 
     variables.burgerButton.addEventListener('click', () => {
     
-        if (variables.burgerButton.children[0].checked) {    
+        if (variables.burgerButton.children[0].checked) {   
             
             variables.toContact.classList.add('onMenu');
             variables.menu.append(variables.toContact);
