@@ -38,8 +38,69 @@ html {
             box-shadow: 0px 2px 4px rgba(236, 236, 236, 1);
             //border-bottom: 1px solid black;
 
+            .description {
+
+                .first {
+                    color: $textColor;
+                    animation-name: opacity;
+                    animation-duration: 2s;
+                }
+                
+                .job {
+                    opacity: 0;
+                    font-weight: bold;
+                    animation-name: opacity;
+                    animation-duration: 0.5s;
+                    animation-delay: 1.3s;
+                    animation-fill-mode: forwards;
+                }
+                
+                .what-i-do {
+                    opacity: 0;
+                    animation-name: opacity;
+                    animation-duration: 0.5s;
+                    animation-delay: 1.4s;
+                    animation-fill-mode: forwards;
+                    color: $textColor;
+    
+                    a {
+                        color: $secondaryColor;
+                        text-decoration: none;
+                    }
+                }
+                
+            }
+
+            @keyframes opacity {
+                from {
+                    transform: translateY(10px);
+                    opacity: 0;
+                }
+                
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+
+                }
+            }
+
             picture {
                 position: relative;
+                animation-name: opacity;
+                animation-duration: 2s;
+
+                @keyframes opacity {
+                    from {
+                        transform: translateY(10px);
+                        opacity: 0;
+                    }
+                    
+                    to {
+                        transform: translateY(0);
+                        opacity: 1;
+
+                    }
+                }
 
                 &::after {
 
@@ -54,6 +115,14 @@ html {
                     background-image: linear-gradient(180deg,hsla(0,0%,100%,0) 1%,#fff 37%);
                     
                 }
+            }
+
+            .buttons {
+                opacity: 0;
+                animation-name: opacity;
+                animation-duration: 0.5s;
+                animation-delay: 1.5s;
+                animation-fill-mode: forwards;
             }
         }
         
@@ -201,7 +270,6 @@ html {
     }
 
     .anim-on {
-        //display: block;
         animation-name: slide;
         animation-duration: 0.5s;
     }

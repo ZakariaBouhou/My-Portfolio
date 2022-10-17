@@ -12,45 +12,20 @@
         .description {
 
             .first {
-                color: $textColor;
                 font-size: 1.5em;
-                animation-name: opacity;
-                animation-duration: 2s;
             }
             
             .job {
-                opacity: 0;
                 font-size: 1.8em;
-                font-weight: bold;
-                animation-name: opacity;
-                animation-duration: 0.5s;
-                animation-delay: 1.3s;
-                animation-fill-mode: forwards;
             }
             
             .what-i-do {
-                opacity: 0;
-                animation-name: opacity;
-                animation-duration: 0.5s;
-                animation-delay: 1.4s;
-                animation-fill-mode: forwards;
-                color: $textColor;
                 font-size: 1.4em;
-
-                a {
-                    color: $secondaryColor;
-                    text-decoration: none;
-                }
             }
             
         }
         
         .buttons {
-            opacity: 0;
-            animation-name: opacity;
-            animation-duration: 0.5s;
-            animation-delay: 1.5s;
-            animation-fill-mode: forwards;
 
             .button-projects {
                 border-radius: 9999px;
@@ -89,7 +64,7 @@
         }
 
         picture {
-            animation-name: opacity;
+            /* animation-name: opacity;
             animation-duration: 2s;
 
             @keyframes opacity {
@@ -103,7 +78,7 @@
                     opacity: 1;
 
                 }
-            }
+            } */
         }
     }
         
