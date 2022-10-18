@@ -176,21 +176,33 @@ animatedElements.forEach(animatedElement => {
 
 export function darkTheme () {
     //if (turnOn == false) {
+        let head = document.getElementsByTagName('HEAD')[0],
+        turnOn = false,
+        link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'assets/css/dark-theme.css';
+        link.id = 'dark';
+        
         head.appendChild(link);
         variables.pictureDarkTheme.childNodes[3].src = 'assets/images/photos/photo-darktheme.png';
-        console.log(variables.pictureDarkTheme.childNodes[1].srcset = 'assets/images/photos/photo-darktheme.png');
+        variables.pictureDarkTheme.childNodes[1].srcset = 'assets/images/photos/photo-darktheme.png';
         variables.logoGithub.childNodes[3].firstChild.style.background = 'white';
         turnOn = true;
-
+        
         localStorage.setItem('theme', 'dark');
-    //}
-}
-
-export function lightTheme () {
-    //if (turnOn == false) {
+        //}
+    }
+    
+    export function lightTheme () {
+        //if (turnOn == false) {
+        let link = document.createElement('link');
+        let turnOn = false;
+        link.rel = 'stylesheet';
+        link.href = 'assets/css/dark-theme.css';
+        link.id = 'dark';
         link.remove();
         variables.pictureDarkTheme.childNodes[3].src = 'assets/images/photos/photo-desktop1.png';
-        console.log(variables.pictureDarkTheme.childNodes[1].srcset = 'assets/images/photos/photoSized2.png');
+        variables.pictureDarkTheme.childNodes[1].srcset = 'assets/images/photos/photoSized2.png';
         variables.logoGithub.childNodes[3].firstChild.style.background = '';
         turnOn = false;
         localStorage.setItem('theme', 'light');
