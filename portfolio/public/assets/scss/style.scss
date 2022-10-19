@@ -259,7 +259,6 @@ html {
         .logo-contact {
             display: flex;
             justify-content: center;
-            padding: 2em;
             list-style-type: none;
 
             a {
@@ -286,6 +285,25 @@ html {
 
         }
     }
+
+    footer {
+        padding: 2em;
+
+        span {
+            display: block;
+            text-align: center;
+            color: $textColor;
+            
+            a {
+                color: $secondaryColor;
+                font-size: small;
+                font-weight: bold;
+                text-decoration: none;
+                
+            }
+        }
+    }
+
 
 }
 

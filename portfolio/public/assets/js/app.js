@@ -76,12 +76,12 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(variables.pictureDarkTheme.childNodes[1].srcset = 'assets/images/photos/photoSized2.png');
             variables.logoGithub.childNodes[3].firstChild.style.background = '';
             turnOn = false;
+
             localStorage.setItem('theme', 'light');
             //console.log(localStorage);
         }
         
     })
-    
     
 
 })

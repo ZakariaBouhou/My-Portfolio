@@ -34,7 +34,7 @@
                 <ul class="menu">
                     <li class="projects"><a href="#projects">Projets</a></li>
                     <li class="skills"><a href="#abilities">Compétences</a></li>
-                    <li class="contact"><a href="#to-contact">Contact</a></li>
+                    <li class="contact"><a href="mailto:zak.bouhou@outlook.fr">Contact</a></li>
                     <li><a class="button-send" href="#"></a></li>
                 </ul>
             </nav>
