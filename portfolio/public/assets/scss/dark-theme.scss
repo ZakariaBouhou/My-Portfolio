@@ -40,6 +40,10 @@ h1, h2, h3, #home {
 .navicon {
     background: white !important;
     
+    &:checked {    
+        background: transparent !important;
+    }
+    
     &::before, &::after {
         background: white !important;
         
@@ -49,13 +53,13 @@ h1, h2, h3, #home {
 picture {
     
     &::after {
-        background-image: linear-gradient(180deg, hsla(0deg, 0%, 100%, 0) 1%, black 37%) !important;
+        background-image: linear-gradient(180deg,rgba(18,18,18,0.07) 1%,#121212 37%) !important;
     }
 }
 
 .items {
     img {
-        background-color: rgba(255, 255, 255, 0.4) !important;
+        background-color: rgba(255, 255, 255, 0.2) !important;
     }
 }
 

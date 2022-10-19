@@ -72,13 +72,13 @@ export function toHideAllScreen () {
     
         if (variables.burgerButton.children[0].checked) {
 
-            document.body.style.overflow = 'hidden';
+            document.body.style.overflowY = 'hidden';
             document.querySelector('main').style.display = 'none';
             document.querySelector('footer').style.display = 'none';
         }
         
         else {      
-            document.body.style.overflow = 'scroll';
+            document.body.style.overflowY = 'scroll';
             document.querySelector('main').style.display = 'block';
             document.querySelector('footer').style.display = 'block';
         }
@@ -87,7 +87,7 @@ export function toHideAllScreen () {
             
             // Desktop menu
             if (e.matches) {
-                document.body.style.overflow = 'scroll';
+                document.body.style.overflowY = 'scroll';
                 document.querySelector('main').style.display = 'block';
                 document.querySelector('footer').style.display = 'block';
             } 
@@ -151,6 +151,7 @@ export function cloneSendButton () {
     let arrayTransform = Array.from(variables.menu.children),
         contact = document.querySelector('.left-side'),
         sendButton = arrayTransform[3].firstChild.cloneNode(true);
+        sendButton.href = 'mailto:zak.bouhou@outlook.fr';
         contact.append(sendButton);
 }
 

@@ -29,8 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     animationElementsWithObserver();
     
-    console.log(localStorage);
-    
     
     let head = document.getElementsByTagName('HEAD')[0];
     let turnOn = false,
@@ -41,14 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if(localStorage.getItem('theme')) {
     
-        if(localStorage.getItem('theme') == 'dark') {        
+        if(localStorage.getItem('theme') == 'dark') {    
             head.appendChild(link);
             variables.pictureDarkTheme.childNodes[3].src = 'assets/images/photos/photo-darktheme.png';
             console.log(variables.pictureDarkTheme.childNodes[1].srcset = 'assets/images/photos/photo-darktheme.png');
             variables.logoGithub.childNodes[3].firstChild.style.background = 'white';
             turnOn = true;
         }
-
+        
         else {
             link.remove();
             variables.pictureDarkTheme.childNodes[3].src = 'assets/images/photos/photo-desktop1.png';
