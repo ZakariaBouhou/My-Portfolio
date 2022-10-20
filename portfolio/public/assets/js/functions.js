@@ -208,4 +208,41 @@ export function darkTheme () {
         turnOn = false;
         localStorage.setItem('theme', 'light');
     //}
-}
+    }  
+    
+    export function toHideNavicon () {
+        if(localStorage.getItem('theme')) {
+            if(localStorage.getItem('theme') == 'dark') { 
+                
+                variables.burgerButton.addEventListener('click', () => {
+
+                    if(variables.burgerButton.children[0].checked) {
+                        //console.log('test');
+                        document.querySelector('.navicon').setAttribute('style', 'background: transparent !important');
+                    }
+
+                    else {
+                        document.querySelector('.navicon').setAttribute('style', 'background: white !important');
+                    }
+                })
+            }
+
+        }
+        if(localStorage.getItem('theme')) {
+            if(localStorage.getItem('theme') == 'light') {    
+
+                variables.burgerButton.addEventListener('click', () => {
+                    if(variables.burgerButton.children[0].checked) {
+                        //console.log('test2');
+                        document.querySelector('.navicon').setAttribute('style', 'background: transparent !important')
+                    }
+
+                    else {
+                        document.querySelector('.navicon').setAttribute('style', 'background: black !important')
+                    }
+                })
+            }
+
+        }
+
+    }

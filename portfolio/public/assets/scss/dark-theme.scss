@@ -14,6 +14,11 @@ nav {
     background-color: rgba(255, 255, 255, 0.07) !important;
 }
 
+.onMenu {
+    border-top: 1px solid rgba(255, 255, 255, 0.11) !important;
+    background-color: rgba(255, 255, 255, 0.07) !important;
+}
+
 
 .menu {
     @media screen and (min-width: 768px) {
@@ -58,5 +63,9 @@ picture {
 
 .home-wrapper {
     padding-bottom: 4em !important;
+}
+
+.onMenu {
+    background-color: black !important;
 }
 

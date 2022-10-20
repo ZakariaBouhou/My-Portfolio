@@ -1,6 +1,6 @@
 // Display menu after click on burger menu
 import * as variables from './variables.js';
-import {burgerClicked, navbarDesktop, navbarMobile, displayHomeWrapper, toHideAllScreen, scrollAfterClickOnFirst2ItemsMenu, cloneSendButton, animationElementsWithObserver} from './functions.js';
+import {burgerClicked, navbarDesktop, navbarMobile, displayHomeWrapper, toHideAllScreen, scrollAfterClickOnFirst2ItemsMenu, cloneSendButton, animationElementsWithObserver, toHideNavicon} from './functions.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -42,16 +42,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if(localStorage.getItem('theme') == 'dark') {    
             head.appendChild(link);
             variables.pictureDarkTheme.childNodes[3].src = 'assets/images/photos/photo-darktheme.png';
-            console.log(variables.pictureDarkTheme.childNodes[1].srcset = 'assets/images/photos/photo-darktheme.png');
+            variables.pictureDarkTheme.childNodes[1].srcset = 'assets/images/photos/photo-darktheme.png';
             variables.logoGithub.childNodes[3].firstChild.style.background = 'white';
+
             turnOn = true;
         }
         
         else {
             link.remove();
             variables.pictureDarkTheme.childNodes[3].src = 'assets/images/photos/photo-desktop1.png';
-            console.log(variables.pictureDarkTheme.childNodes[1].srcset = 'assets/images/photos/photoSized2.png');
+            variables.pictureDarkTheme.childNodes[1].srcset = 'assets/images/photos/photoSized2.png';
             variables.logoGithub.childNodes[3].firstChild.style.background = '';
+
             turnOn = false;
             localStorage.setItem('theme', 'light');
         }
@@ -60,12 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
     variables.toggleButton.childNodes[3].addEventListener('click', () => {
         
         if (turnOn == false) {
-            head.appendChild(link);
+
             variables.pictureDarkTheme.childNodes[3].src = 'assets/images/photos/photo-darktheme.png';
-            console.log(variables.pictureDarkTheme.childNodes[1].srcset = 'assets/images/photos/photo-darktheme.png');
+            head.appendChild(link);
+            variables.pictureDarkTheme.childNodes[1].srcset = 'assets/images/photos/photo-darktheme.png';
             variables.logoGithub.childNodes[3].firstChild.style.background = 'white';
-            turnOn = true;
-            
+            turnOn = true;      
             localStorage.setItem('theme', 'dark');
             //console.log(localStorage);
         }
@@ -73,15 +75,16 @@ document.addEventListener('DOMContentLoaded', () => {
         else {
             link.remove();
             variables.pictureDarkTheme.childNodes[3].src = 'assets/images/photos/photo-desktop1.png';
-            console.log(variables.pictureDarkTheme.childNodes[1].srcset = 'assets/images/photos/photoSized2.png');
+            variables.pictureDarkTheme.childNodes[1].srcset = 'assets/images/photos/photoSized2.png';
             variables.logoGithub.childNodes[3].firstChild.style.background = '';
             turnOn = false;
-
+            
             localStorage.setItem('theme', 'light');
             //console.log(localStorage);
         }
         
     })
-    
+
+    toHideNavicon();
 
 })
