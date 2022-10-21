@@ -108,6 +108,10 @@ export function scrollAfterClickOnFirst2ItemsMenu () {
             variables.menu.classList.remove('isChecked');
             document.body.style.overflow = 'scroll';
             document.querySelector('main').style.display = 'block';
+            variables.toContact.classList.remove('onMenu');
+            variables.containerContact.append(variables.toContact);
+            document.querySelector('footer').style.display = '';
+            variables.homeWrapper.classList.remove('hidden');
         })
     })
 }
@@ -116,9 +120,10 @@ export function scrollAfterClickOnFirst2ItemsMenu () {
 export function navbarDesktop () {
 
     if (variables.desktop.matches) {
+        //variables.menu.style.display = 'flex'
         variables.navBar.insertAdjacentElement('beforeend', variables.toggleButton);
         variables.burgerButton.remove();
-    
+        
         variables.divContainer.append(variables.menu, variables.toggleButton);
         variables.divContainer.style.display = 'flex';
         variables.navBar.append(variables.divContainer);
@@ -128,6 +133,7 @@ export function navbarDesktop () {
         
         // Desktop menu
         if (e.matches) {
+            //variables.menu.style.display = 'flex'
             variables.burgerButton.remove();
             variables.divContainer.append(variables.menu, variables.toggleButton);
             variables.navBar.append(variables.divContainer);
@@ -135,7 +141,7 @@ export function navbarDesktop () {
     
             if(variables.burgerButton.children[0].checked) {
 
-                variables.menu.children[3].style.display = 'none';
+                //variables.menu.children[3].style.display = 'none';
                 variables.toggleButton.style.marginLeft = '1em';
                 variables.divContainer.prepend(variables.menu);
                 variables.toContact.classList.remove('onMenu');
@@ -176,73 +182,56 @@ animatedElements.forEach(animatedElement => {
 }
 
 export function darkTheme () {
-    //if (turnOn == false) {
-        let head = document.getElementsByTagName('HEAD')[0],
-        turnOn = false,
-        link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = 'assets/css/dark-theme.css';
-        link.id = 'dark';
-        
-        head.appendChild(link);
-        variables.pictureDarkTheme.childNodes[3].src = 'assets/images/photos/photo-darktheme.png';
-        variables.pictureDarkTheme.childNodes[1].srcset = 'assets/images/photos/photo-darktheme.png';
-        variables.logoGithub.childNodes[3].firstChild.style.background = 'white';
-        turnOn = true;
-        
-        localStorage.setItem('theme', 'dark');
-        //}
-    }
+
+    variables.head.appendChild(variables.link);
+    variables.pictureDarkTheme.childNodes[3].src = 'assets/images/photos/photo-darktheme.png';
+    variables.pictureDarkTheme.childNodes[1].srcset = 'assets/images/photos/photo-darktheme-mobile.png';
+    variables.logoGithub.childNodes[3].firstChild.style.background = 'white';
+          
+}
     
-    export function lightTheme () {
-        //if (turnOn == false) {
-        let link = document.createElement('link');
-        let turnOn = false;
-        link.rel = 'stylesheet';
-        link.href = 'assets/css/dark-theme.css';
-        link.id = 'dark';
-        link.remove();
-        variables.pictureDarkTheme.childNodes[3].src = 'assets/images/photos/photo-desktop1.png';
-        variables.pictureDarkTheme.childNodes[1].srcset = 'assets/images/photos/photoSized2.png';
-        variables.logoGithub.childNodes[3].firstChild.style.background = '';
-        turnOn = false;
-        localStorage.setItem('theme', 'light');
-    //}
-    }  
+export function lightTheme () {
+
+    variables.link.remove();
+    variables.pictureDarkTheme.childNodes[3].src = 'assets/images/photos/photo-desktop1.png';
+    variables.pictureDarkTheme.childNodes[1].srcset = 'assets/images/photos/photoSized2.png';
+    variables.logoGithub.childNodes[3].firstChild.style.background = '';
     
-    export function toHideNavicon () {
-        if(localStorage.getItem('theme')) {
-            if(localStorage.getItem('theme') == 'dark') { 
-                
-                variables.burgerButton.addEventListener('click', () => {
+}  
+    
+export function toHideNavicon () {
+    if(localStorage.getItem('theme')) {
+        if(localStorage.getItem('theme') == 'dark') { 
+            
+            variables.burgerButton.addEventListener('click', () => {
 
-                    if(variables.burgerButton.children[0].checked) {
-                        //console.log('test');
-                        document.querySelector('.navicon').setAttribute('style', 'background: transparent !important');
-                    }
+                if(variables.burgerButton.children[0].checked) {
+                    //console.log('test');
+                    document.querySelector('.navicon').setAttribute('style', 'background: transparent !important');
+                }
 
-                    else {
-                        document.querySelector('.navicon').setAttribute('style', 'background: white !important');
-                    }
-                })
-            }
-
-        }
-        if(localStorage.getItem('theme')) {
-            if(localStorage.getItem('theme') == 'light') {    
-
-                variables.burgerButton.addEventListener('click', () => {
-                    if(variables.burgerButton.children[0].checked) {
-                        //console.log('test2');
-                        document.querySelector('.navicon').setAttribute('style', 'background: transparent !important')
-                    }
-
-                    else {
-                        document.querySelector('.navicon').setAttribute('style', 'background: black !important')
-                    }
-                })
-            }
-
+                else {
+                    document.querySelector('.navicon').setAttribute('style', 'background: white !important');
+                }
+            })
         }
 
     }
+    if(localStorage.getItem('theme')) {
+        if(localStorage.getItem('theme') == 'light') {    
+
+            variables.burgerButton.addEventListener('click', () => {
+                if(variables.burgerButton.children[0].checked) {
+                    //console.log('test2');
+                    document.querySelector('.navicon').setAttribute('style', 'background: transparent !important')
+                }
+
+                else {
+                    document.querySelector('.navicon').setAttribute('style', 'background: black !important')
+                }
+            })
+        }
+
+    }
+
+}
