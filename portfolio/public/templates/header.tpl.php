@@ -35,7 +35,7 @@
                     <li class="projects"><a href="#projects">Projets</a></li>
                     <li class="skills"><a href="#abilities">Compétences</a></li>
                     <li class="contact"><a href="mailto:zak.bouhou@outlook.fr">Contact</a></li>
-                    <li><a class="button-send" href="#"></a></li>
+                    <li><a class="button-send" href="mailto:zak.bouhou@outlook.fr"></a></li>
                 </ul>
             </nav>
         </header>
