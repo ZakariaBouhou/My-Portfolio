@@ -213,6 +213,7 @@ export function toHideNavicon () {
                 else {
                     document.querySelector('.navicon').setAttribute('style', 'background: white !important');
                 }
+                
             })
         }
 
@@ -223,11 +224,11 @@ export function toHideNavicon () {
             variables.burgerButton.addEventListener('click', () => {
                 if(variables.burgerButton.children[0].checked) {
                     //console.log('test2');
-                    document.querySelector('.navicon').setAttribute('style', 'background: transparent !important')
+                    document.querySelector('.navicon').setAttribute('style', 'background: transparent !important');
                 }
 
                 else {
-                    document.querySelector('.navicon').setAttribute('style', 'background: black !important')
+                    document.querySelector('.navicon').setAttribute('style', 'background: black !important');
                 }
             })
         }
