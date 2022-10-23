@@ -1,6 +1,6 @@
 <?php
 
-try {
+/* try {
 
     $bdd = new PDO('mysql:host=zakboukdb.mysql.db;dbname=zakboukdb;charset=utf8', 'zakboukdb', 'Cuicui75012');
 
@@ -10,7 +10,7 @@ catch(Exception $e) {
 
     die('Erreur : '.$e->getMessage());
 
-}
+} */
 
 /* try {
 

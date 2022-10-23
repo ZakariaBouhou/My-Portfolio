@@ -169,9 +169,7 @@ observer = new IntersectionObserver(entries => {
         if (entry.isIntersecting) {
             entry.target.classList.add('anim-on');
             observer.unobserve(entry.target);
-        } else {
-            entry.target.classList.remove('anim-on');
-        }
+        } 
     });
 });
 
@@ -187,6 +185,7 @@ export function darkTheme () {
     variables.pictureDarkTheme.childNodes[3].src = 'assets/images/photos/photo-darktheme.png';
     variables.pictureDarkTheme.childNodes[1].srcset = 'assets/images/photos/photo-darktheme-mobile.png';
     variables.logoGithub.childNodes[3].firstChild.style.background = 'white';
+    //document.querySelector('.ball').style.top = ''
           
 }
     
@@ -216,7 +215,7 @@ export function toHideNavicon () {
                 
             })
         }
-
+        
     }
     if(localStorage.getItem('theme')) {
         if(localStorage.getItem('theme') == 'light') {    

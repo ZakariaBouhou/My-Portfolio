@@ -67,37 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
     })
 
-    toHideNavicon();
+    //toHideNavicon();
 
-    // Fix padding after scroll on elements in mobile
-    let arrayTransform = Array.from(variables.menu.children),
-    first2Items = arrayTransform.slice(0,2);
-
-    if (variables.mobile.matches) {
-
-        first2Items.forEach( (item) => {
-            item.addEventListener('click', () => {
-                
-                variables.menu.style.display = 'none';
-                variables.menu.style.flexDirection = 'column';
-            })
-        })
-            
-    }
-        
-    else {
-
-        variables.menu.style.display = '';
-        variables.menu.style.flexDirection = '';
-        
-    }
-    
-    
-    variables.desktop.addEventListener('change', () => {
-                       
-        variables.menu.style.display = '';
-        variables.menu.style.flexDirection = '';
-
-    })
 
 })
