@@ -4,7 +4,7 @@
         <a href="https://github.com/ZakariaBouhou" target="_blank"><img src="../assets/images/logo/github-mini.png" alt="logo github"></a>
         <a href="https://www.youtube.com/channel/UCsl_IDV64kNjlhHh4StGW5g" target="_blank"><img src="../assets/images/logo/youtube-mini.png" alt="logo youtube"></a>
     </li>    
-    <span>Inspiré par <a href="https://rubenkuipers.design/">Ruben Kuipers</a></span>       
+    <span>Inspiré par <a href="https://rubenkuipers.design/" target="-blank">Ruben Kuipers</a></span>       
 </footer>
     </div>
     
