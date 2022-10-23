@@ -14,17 +14,17 @@
 
             .first {
                 color: $textColor;
-                font-size: 1.2em;
+                //font-size: 1.2em;
             }
             
             .job {
-                font-size: 1.4em;
+                font-size: 1.2em;
                 font-weight: bold;
             }
             
             .what-i-do {
                 color: $textColor;
-                font-size: 1.2em;
+                //font-size: 1.2em;
 
                 a {
                     color: $secondaryColor;
@@ -45,17 +45,12 @@
                 font-weight: 700;
                 display: inline-block;
                 line-height: 1.375;
-                font-size: 1rem;
                 line-height: 1.5rem;
-                padding-left: 1rem;
-                padding-right: 1rem;
-                padding-top: .5rem;
-                padding-bottom: .6rem;
+                padding: 0.5em;
                 background-image: linear-gradient(90deg,#009bff,#0062ff);
                 box-shadow: 0 2px 8px 0 rgba(0,34,255,.08),0 2px 8px 0 rgba(0,11,80,.12);
                 z-index: 1;
                 text-decoration: none;
-                margin-right: 0.5em;
                 
                 &::before {
                     content: 'Voir mes projets';
@@ -68,7 +63,7 @@
                 text-decoration: none;
                 color: $secondaryColor;
                 font-weight: bold;
-                margin-left: 0.5em;
+                //margin-left: 0.5em;
             }
         }
      
