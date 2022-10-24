@@ -112,6 +112,10 @@ export function scrollAfterClickOnFirst2ItemsMenu () {
             variables.containerContact.append(variables.toContact);
             document.querySelector('footer').style.display = '';
             variables.homeWrapper.classList.remove('hidden');
+            if(variables.mobile.matches) {
+
+                variables.navBar.append(variables.menu);
+            }
         })
     })
 }
