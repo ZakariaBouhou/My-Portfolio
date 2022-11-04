@@ -1,6 +1,36 @@
 @import 'variables';
 
-@media screen and (min-width: 768px) {    
+@media screen and (min-width: 768px) {  
+    
+    /* Menu */
+    nav {    
+        padding: 0;
+        display: flex;
+        justify-content: space-evenly;
+        backdrop-filter: blur(20px) saturate(180%);
+        
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            li {
+                a {
+                    padding-left: 1em;
+                    font-size: 1.2em;
+                }
+            }
+
+        }
+        .menu-btn, .menu-icon {
+            display: none;
+        }
+
+        .themeToggleButton {
+            align-self: center;
+        }
+    }
+
     //about
     .home-wrapper {
         text-align: center;

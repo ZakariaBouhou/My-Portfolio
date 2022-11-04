@@ -1,6 +1,208 @@
 @import 'variables';
 
 @media screen and (max-width: 767px) {  
+
+    /* Menu */
+    @mixin iconBurgerMenu {
+        content: '';
+        background: black;
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .burgerButton {
+            padding-right: 2em;
+        }
+
+        #home {
+            flex-grow: 3;
+        }
+        
+        .menu {
+            
+            .projects, .skills, .contact {          
+                display: none;
+            }
+        }
+        
+        .themeToggleButton {
+            label {
+                margin-right: 2em;
+            }
+        
+        }
+        .menu-btn {
+            display: none;
+            
+            &:checked ~ .menu {
+                max-height: 290px;
+            }
+            &:checked ~ .menu-icon:not(.steps) .navicon:before,
+            &:checked ~ .menu-icon:not(.steps) .navicon:after {
+                top: 0;
+            }
+            
+            &:checked ~ .menu-icon .navicon {
+                background: transparent;
+                
+                &:before {
+                    transform: rotate(-45deg);
+                    background-color: $secondaryColor;
+                }
+                &:after {
+                    transform: rotate(45deg);
+                    background-color: $secondaryColor;
+                }
+            } 
+        }
+        .menu-icon {
+            padding: 1.7em 1.4em 1.8em 1.4em;
+            cursor: pointer;
+            
+            .navicon {
+                background: black;
+                display: block;
+                height: 2px;
+                position: relative;
+                transition: background .2s ease-out;
+                width: 18px;
+                
+                &:before {
+                    @include iconBurgerMenu;
+                    top: 5px;
+                }
+                &:after {
+                    @include iconBurgerMenu;
+                    top: -5px;                  
+                }
+            }
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;   
+        }
+    }   
+    
+    .isChecked {
+        position: fixed;
+        margin-left: auto;
+        margin-right: auto;
+        top: 20vh;
+        left: 0;
+        right: 0;
+        height: 100%;
+        text-align: center;
+        animation-name: glissement;
+        animation-duration: 0.5s;
+        background-color: white;
+        z-index: 2;
+
+        @keyframes glissement {
+            from {
+                opacity: 0;
+            }
+            
+            to {
+                opacity: 1;
+
+            }
+        }
+        
+        .projects {
+            padding-top: 2em;
+        }
+        
+        li {
+
+           
+            padding: 1em;
+            
+            &:not(:last-child) {
+                color: $textColor;        
+            }
+
+            &:nth-child(3) {
+                color: $secondaryColor;
+            }
+            
+            a {
+                text-decoration: none;
+                font-size: 1.2em;
+                transition-duration: 0.3s;
+
+                &:visited {
+                    color: inherit;
+                }
+                
+
+                &:hover {
+                    color: $secondaryColor;
+                }
+                
+            }
+
+            .button-send {
+                border-radius: 9999px;
+                position: relative;
+                letter-spacing: 0.025em;
+                --tw-text-opacity: 1;
+                color: rgba(255, 255, 255, var(--tw-text-opacity));
+                font-weight: 700;
+                display: inline-block;
+                line-height: 1.375;
+                font-size: 1rem;
+                line-height: 1.5rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                padding-top: .5rem;
+                padding-bottom: .6rem;
+                background-image: linear-gradient(90deg,#009bff,#0062ff);
+                box-shadow: 0 2px 8px 0 rgba(0,34,255,.08),0 2px 8px 0 rgba(0,11,80,.12);
+                z-index: 1;
+
+                &::before {
+                    content: 'Envoyer un message';
+                    color: white;
+                }
+            }
+        }
+
+    }
+
+    .onMenu {
+        color: $textColor;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        width: 100%;
+        bottom: 20%;
+        right: 0;
+        background-color: rgb(246, 246, 246);
+        padding: 2em;
+        border-top: 1px solid lightgray;
+        font-size: 1.2em;
+
+        a {
+            text-decoration: none;
+            color: $textColor;
+
+            &:first-child {
+                margin-bottom: 1em;
+            }
+        }
+    }
+
     //about
     .home-wrapper {
         position: relative;
