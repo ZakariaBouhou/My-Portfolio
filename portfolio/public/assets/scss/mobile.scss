@@ -1,4 +1,4 @@
-@import 'variables';
+@import 'variables', 'mixins';
 
 @media screen and (max-width: 767px) {  
 
@@ -12,7 +12,6 @@
         transition: all .2s ease-out;
         width: 100%;
     }
-
 
     nav {
         display: flex;
@@ -97,10 +96,9 @@
         position: fixed;
         margin-left: auto;
         margin-right: auto;
-        top: 20vh;
         left: 0;
         right: 0;
-        height: 100%;
+        height: 100vh;
         text-align: center;
         animation-name: glissement;
         animation-duration: 0.5s;
@@ -117,14 +115,35 @@
 
             }
         }
-        
+
+        .projects, .skills, .contact, :nth-child(4) {
+            position: absolute;
+            left: 0;
+            right: 0;
+
+            &:nth-child(4) {
+                top: 50vh;
+            }
+        }
+
         .projects {
-            padding-top: 2em;
+            top: 20vh;
+        }
+
+        .skills {
+            top: 30vh;
+        }
+        
+        .contact {        
+            top: 40vh;
+        }
+
+        .button-send {
+            @include send-button;
         }
         
         li {
-
-           
+        
             padding: 1em;
             
             &:not(:last-child) {
@@ -136,7 +155,6 @@
             }
             
             a {
-                text-decoration: none;
                 font-size: 1.2em;
                 transition-duration: 0.3s;
 
@@ -150,31 +168,6 @@
                 }
                 
             }
-
-            .button-send {
-                border-radius: 9999px;
-                position: relative;
-                letter-spacing: 0.025em;
-                --tw-text-opacity: 1;
-                color: rgba(255, 255, 255, var(--tw-text-opacity));
-                font-weight: 700;
-                display: inline-block;
-                line-height: 1.375;
-                font-size: 1rem;
-                line-height: 1.5rem;
-                padding-left: 1rem;
-                padding-right: 1rem;
-                padding-top: .5rem;
-                padding-bottom: .6rem;
-                background-image: linear-gradient(90deg,#009bff,#0062ff);
-                box-shadow: 0 2px 8px 0 rgba(0,34,255,.08),0 2px 8px 0 rgba(0,11,80,.12);
-                z-index: 1;
-
-                &::before {
-                    content: 'Envoyer un message';
-                    color: white;
-                }
-            }
         }
 
     }
@@ -186,7 +179,7 @@
         flex-direction: column;
         align-items: end;
         width: 100%;
-        bottom: 20%;
+        bottom: 0;
         right: 0;
         background-color: rgb(246, 246, 246);
         padding: 2em;
@@ -194,7 +187,6 @@
         font-size: 1.2em;
 
         a {
-            text-decoration: none;
             color: $textColor;
 
             &:first-child {
@@ -203,7 +195,7 @@
         }
     }
 
-    //about
+    /* HOME */
     .home-wrapper {
         position: relative;
         text-align: center;
@@ -222,45 +214,12 @@
                 font-size: 1.2em;
                 font-weight: bold;
             }
-            
-            .what-i-do {
-                color: $textColor;
-
-                a {
-                    color: $secondaryColor;
-                    text-decoration: none;
-                }
-            }
 
         }
 
         .buttons {
-
-            .button-projects {
-                border-radius: 9999px;
-                position: relative;
-                letter-spacing: 0.025em;
-                --tw-text-opacity: 1;
-                color: rgba(255, 255, 255, var(--tw-text-opacity));
-                font-weight: 700;
-                display: inline-block;
-                line-height: 1.375;
-                line-height: 1.5rem;
-                padding: 0.5em;
-                background-image: linear-gradient(90deg,#009bff,#0062ff);
-                box-shadow: 0 2px 8px 0 rgba(0,34,255,.08),0 2px 8px 0 rgba(0,11,80,.12);
-                z-index: 1;
-                text-decoration: none;
-                
-                &::before {
-                    content: 'Voir mes projets';
-                    color: white;
-                }
-                
-            }
             
             .more-about-me {
-                text-decoration: none;
                 color: $secondaryColor;
                 font-weight: bold;
             }
@@ -310,16 +269,18 @@
         }
     }
 
+    /* SKILLS */
     .abilities {
-
+        
         padding: 2em;
-
+        
         .items {
             flex-wrap: wrap;
         }
-
+        
     }
-
+    
+    /* CONTACT */
     .to-contact {
         padding: 2em;
         flex-direction: column;

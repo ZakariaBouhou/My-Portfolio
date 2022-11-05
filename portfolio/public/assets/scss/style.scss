@@ -1,19 +1,10 @@
-@import 'header';
-@import 'mobile';
-@import 'desktop';
+/* ____ MAIN STYLESHEET FOR ALL MEDIA QUERIES ____ */
+@import 'mobile', 'desktop', 'mixins';
 
-@mixin googleFonts($nom) {
-    @import url('https://fonts.googleapis.com/css2?family=' + $nom + '&display=swap');
-}
 
 @include googleFonts('Poppins');
 
-@mixin textareaAndInputs() {
-    padding: 1.5em;
-    border-radius: 0.5em;
-    border: 0.2em solid #bbb;
-    outline: none;
-}
+/* GENERAL */
 
 html {
     scroll-behavior: smooth;
@@ -23,20 +14,111 @@ html {
         font-family: 'Poppins', 'Open Sans', sans-serif;
         background-color: white;
 
+        a {
+            text-decoration: none;
+        }
 
+        nav #home, .job, h2, h3, footer a {
+            font-weight: bold;
+        }
+
+        /* MENU */
         nav {
+
+            position: fixed;
+            width: 100%;
+            z-index: 3;
+            box-shadow: $boxShadow;
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
             padding: 1.5em;
-            background: rgba(255,255,255,.9);
+            background-color: rgba(255,255,255,.9);
 
             a {
                 align-self: center;
             }
+
+            #home {
+                color: $secondaryColor;
+                font-size: 1.2em;
+            }
+
+            .themeToggleButton {
+
+                .checkbox {
+                        opacity: 0;
+                        position: absolute;
+                    }
+    
+                .label {
+                    width: 2.5em;
+                    background-color:#EDEDED;
+                    display: flex;
+                    border-radius:50px;
+                    align-items: center;
+                    justify-content: space-around;
+                    padding: 5px;
+                    position: relative;
+                    transform: scale(1.5);
+                    height: 20px;
+                    cursor: pointer;
+                }
+    
+                .ball {
+                    width: 25px;
+                    height: 25px;
+                    background-color: white;
+                    position: absolute;
+                    left: 2px;
+                    border-radius: 50%;
+                    transition: transform 0.2s linear;
+                }
+    
+                /*  target the element after the label*/
+                .checkbox:checked + .label .ball{
+                    transform: translateX(21px);
+                }
+    
+                .fa-moon, .fa-sun {
+                    color: black;
+                    font-size: x-small;
+                    z-index: 1;
+                }
+            }
+
+            .menu {
+
+                .projects, .skills {
+                    
+                    a {
+                        color: $textColor;
+                        transition-property: color;
+                        transition-duration: 0.3s;
+                        
+                        &:hover {
+                            color: $secondaryColor;
+                        }
+                        
+                    }
+        
+                    
+                }
+           
+                .contact > a {
+                    color: $secondaryColor;
+                }
+                
+            }
+
+            
         }
 
+        /* HOME (Main title, job, picture) */
+        
         .home-wrapper {
-            box-shadow: 0px 2px 4px rgba(236, 236, 236, 1);
-
+            box-shadow: $boxShadow;
+            
             .description {
+                
                 .first {
                     color: $textColor;
                     animation-name: opacity;
@@ -44,30 +126,20 @@ html {
                 }
                 
                 .job {
-                    opacity: 0;
-                    font-weight: bold;
-                    animation-name: opacity;
-                    animation-duration: 0.5s;
-                    animation-delay: 1.3s;
-                    animation-fill-mode: forwards;
+                    @include animation($delay: 1.3s);
                 }
                 
                 .what-i-do {
-                    opacity: 0;
-                    animation-name: opacity;
-                    animation-duration: 0.5s;
-                    animation-delay: 1.4s;
-                    animation-fill-mode: forwards;
+                    @include animation($delay: 1.4s);
                     color: $textColor;
-    
+                    
                     a {
                         color: $secondaryColor;
-                        text-decoration: none;
                     }
                 }
                 
             }
-
+            
             @keyframes opacity {
                 from {
                     transform: translateY(10px);
@@ -77,28 +149,16 @@ html {
                 to {
                     transform: translateY(0);
                     opacity: 1;
-
+                    
                 }
             }
-
+            
             picture {
                 position: relative;
                 animation-name: opacity;
                 animation-duration: 2s;
-
-                @keyframes opacity {
-                    from {
-                        transform: translateY(10px);
-                        opacity: 0;
-                    }
-                    
-                    to {
-                        transform: translateY(0);
-                        opacity: 1;
-
-                    }
-                }
-
+            
+                
                 &::after {
 
                     content: "";
@@ -113,30 +173,30 @@ html {
                     
                 }
             }
-
+            
             .buttons {
-                opacity: 0;
-                animation-name: opacity;
-                animation-duration: 0.5s;
-                animation-delay: 1.5s;
-                animation-fill-mode: forwards;
+                @include animation($delay: 1.5s);
+
+                .button-projects {
+                    @include projects-button;
+                }
             }
         }
+        
+        /* PROJECTS */
         
         .all-projects {
             
             text-align: center;
             padding-top: 2em;
             padding-bottom: 2em;
-            box-shadow: 0px 2px 4px rgba(236, 236, 236, 1);
-
+            box-shadow: $boxShadow;
+            
             h2, p {
                 margin-bottom: 1em;
-                font-size: 1.4em;
             }
-
             h2 {
-                font-weight: bold;
+                font-size: 1.4em;
             }
             
             p {
@@ -145,9 +205,9 @@ html {
             }
 
             .projects-wrapper {
-
+                
                 display: flex;
-
+                
                 picture {
                     padding: 1em;
                     
@@ -164,20 +224,18 @@ html {
             }
         }
 
+        /* LANGUAGES & TOOLS */
+        
         .abilities {
             
             text-align: center;
             padding-top: 2em;
             padding-bottom: 2em;
-            box-shadow: 0px 2px 4px rgba(236, 236, 236, 1);
+            box-shadow: $boxShadow;
             
             h2, p {
                 margin-bottom: 1em;
                 font-size: 1.4em;
-            }
-            
-            h2 {
-                font-weight: bold;
             }
             
             p {
@@ -198,13 +256,15 @@ html {
             }
         }
         
+        /* CONTACT */
+        
         .to-contact {
-
+            
             padding-top: 2em;
             padding-bottom: 2em;
             display: flex;
             text-align: center;
-            box-shadow: 0px 2px 4px rgba(236, 236, 236, 1);
+            box-shadow: $boxShadow;
             
             .right-side  {
                 display: flex;
@@ -212,62 +272,37 @@ html {
                 font-size: 1.2em;
                 
                 a {
-                    text-decoration: none;
                     color: $textColor;
-
+                    
                     &:first-child {
                         margin-bottom: 1em;
                     }
                 }
             }
-
+            
             h3 {
                 margin-bottom: 1em;
-                font-weight: bold;
                 font-size: 1.4em;
             }
-
+            
             .button-send {
-                border-radius: 9999px;
-                position: relative;
-                letter-spacing: 0.025em;
-                --tw-text-opacity: 1;
-                color: rgba(255, 255, 255, var(--tw-text-opacity));
-                font-weight: 700;
-                display: inline-block;
-                line-height: 1.375;
-                font-size: 1rem;
-                line-height: 1.5rem;
-                padding-left: 1rem;
-                padding-right: 1rem;
-                padding-top: .5rem;
-                padding-bottom: .6rem;
-                background-image: linear-gradient(90deg,#009bff,#0062ff);
-                box-shadow: 0 2px 8px 0 rgba(0,34,255,.08),0 2px 8px 0 rgba(0,11,80,.12);
-                z-index: 1;
-                text-decoration: none;
-                margin-bottom: 2em;
-                
-                &::before {
-                    content: 'Envoyer un message';
-                    color: white;
-                }
+                @include send-button;
             }
             
         }
-
+        
         .logo-contact {
             display: flex;
             justify-content: center;
             list-style-type: none;
-
+            
             a {
                 padding: 0.5em;
             }
         }
-
+        
     }
-
+    
     .anim-on {
         animation-name: slide;
         animation-duration: 0.5s;
@@ -282,9 +317,12 @@ html {
         to {
             transform: translateX(0);
             opacity: 1;
-
+            
         }
     }
+    
+    
+    /* FOOTER */
 
     footer {
         padding: 2em;
@@ -296,14 +334,10 @@ html {
             
             a {
                 color: $secondaryColor;
-                font-size: small;
-                font-weight: bold;
-                text-decoration: none;
-                
+                font-size: small;          
             }
         }
     }
-
 
 }
 

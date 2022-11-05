@@ -1,77 +1,79 @@
-body, .menu {
-    background-color: black !important;
-}
+@import 'mixins', 'variables';
 
-nav {
-    background-color: rgba(255, 255, 255, 0.07) !important;
-
-    @media screen and (max-width: 767px) {
-        -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-    }
-    @media screen and (min-width: 768px) {
-        backdrop-filter: blur(20px) saturate(180%) !important;
-    }
-    box-shadow: none !important;
-}
-
-.nav, .home-wrapper, .all-projects, .abilities, .to-contact, footer{
-    box-shadow: none !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.11) !important;
-    background-color: rgba(255, 255, 255, 0.07) !important;
-}
-
-.onMenu {
-    border-top: 1px solid rgba(255, 255, 255, 0.11) !important;
-    background-color: rgba(255, 255, 255, 0.07) !important;
-}
-
-
-.menu {
-    @media screen and (min-width: 768px) {
-        background-color: transparent !important;
-    }
-    .onMenu {
+body {
+    @include bgColor($color: black !important);
+    
+    nav {
+    
         @media screen and (max-width: 767px) {
-            background-color: none !important;
+            -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+        }
+        @media screen and (min-width: 768px) {
+            backdrop-filter: blur(20px) saturate(180%) !important;
         }
     }
-}
 
-h1, h2, h3, #home {
-    color: white !important;
-}
-
-.button-projects::before, .button-send::before {
-    color: black !important;
-}
-
-.navicon {
-    background: white !important;
+    nav, .home-wrapper, .all-projects, .abilities, .to-contact, footer{
+        box-shadow: none !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.11);
+        background-color: $bgColorDark;
+    }
     
-    &::before, &::after {
-        background: white !important;
+    .onMenu {
+        border-top: 1px solid rgba(255, 255, 255, 0.11) !important;
+        background-color: $bgColorDark;
+    }
+    
+    
+    .menu {
+        @extend body;
+    
+        @media screen and (min-width: 768px) {
+            @include bgColor($color: transparent !important);
+        }
+        .onMenu {
+            @media screen and (max-width: 767px) {
+                @include bgColor($color: none !important);
+            }
+        }
+    }
+    
+    
+    h1, h2, h3 {
+        color: white;
+    }
+    
+    #home {
+        color: white !important;       
+    }
+    
+    .button-projects::before, .button-send::before {
+        color: black !important;
+    }
+    
+    .navicon {
+        @include bgColor($color: white !important);
         
+        &::before, &::after {
+            @extend .navicon;
+            
+        }
     }
-}
     
-picture {
+    picture {
+        
+        &::after {
+            background-image: linear-gradient(180deg,rgba(18,18,18,0.07) 1%,#121212 37%) !important;
+        }
+    }
     
-    &::after {
-        background-image: linear-gradient(180deg,rgba(18,18,18,0.07) 1%,#121212 37%) !important;
+    .items {
+        img {
+            @include bgColor($color: rgba(255, 255, 255, 0.2) !important);
+        }
     }
+    
 }
 
-.items {
-    img {
-        background-color: rgba(255, 255, 255, 0.2) !important;
-    }
-}
 
-.home-wrapper {
-    padding-bottom: 4em !important;
-}
-
-.onMenu {
-    background-color: black !important;
-}
 
