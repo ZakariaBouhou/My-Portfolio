@@ -1,91 +1,289 @@
+@import 'variables', 'mixins';
+
 @media screen and (max-width: 767px) {  
-    /* Landing page */
-    
-    .bg-img {
-        justify-content: space-evenly;
-        background-position-x: 35%;
 
-        .about {
-            background-color:rgba(47,79,79, 0.3);
-            padding: 1em;
-            text-align: center;
-            font-size: 2em;
-            font-style: italic;
-
-            #firstname, #job, #city {
-                padding-bottom: 0.8em;
-            }
-        
-            #city {
-                padding-bottom: 0;
-            }
-        }
-    }
-    
-    /* Description text */
-    
-    .content-description {      
-        padding: 1.5em 0 1.5em 0;
-    }
-       
-    /* Skills */
-    
-    .tools {
-        p {
-            font-size: 1.5em;
-            padding-bottom: 0;
-        }
-        img {
-            padding-bottom: 1.5em;;
-        }  
-        
-    }
-    .iconSkills.anim {
-        animation: fromRightSide 0.5s forwards;  
-        animation-delay: 1s;
-    }
-    
-    .skillName.anim {
-        animation: fromLeftSide 1s;
-    }
-
-    /* Projects */
-      
-    .projects-container {        
-        flex-direction: column;
-
-        h3 {
-            padding-top: 1.5em;
-        }    
-
-        .content-project {
-            border: 1px ridge rgba(0, 0, 0, 0.404);
-        }
-    }
-    
-    .itemsProject a:visited {
-        color: #844;  
-        font-weight: bold;
-    }
-
-    .itemsProject.anim {
-        animation: fromLeftSide 1s;
-
-        .describeHidden {
-            display: none;
-        }
-    }
-
-    /* Contact */
-
-    .form-container {
+    /* Menu */
+    @mixin iconBurgerMenu {
+        content: '';
+        background: black;
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
         width: 100%;
-    }   
-     
-    /* Legals */
-    
-    .legals {      
-        padding: 1.5em;
     }
 
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .burgerButton {
+            padding-right: 2em;
+        }
+
+        #home {
+            flex-grow: 3;
+        }
+        
+        .menu {
+            
+            .projects, .skills, .contact {          
+                display: none;
+            }
+        }
+        
+        .themeToggleButton {
+            label {
+                margin-right: 2em;
+            }
+        
+        }
+        .menu-btn {
+            display: none;
+            
+            &:checked ~ .menu {
+                max-height: 290px;
+            }
+            &:checked ~ .menu-icon:not(.steps) .navicon:before,
+            &:checked ~ .menu-icon:not(.steps) .navicon:after {
+                top: 0;
+            }
+            
+            &:checked ~ .menu-icon .navicon {
+                background: transparent;
+                
+                &:before {
+                    transform: rotate(-45deg);
+                    background-color: $secondaryColor;
+                }
+                &:after {
+                    transform: rotate(45deg);
+                    background-color: $secondaryColor;
+                }
+            } 
+        }
+        .menu-icon {
+            padding: 1.7em 1.4em 1.8em 1.4em;
+            cursor: pointer;
+            
+            .navicon {
+                background: black;
+                display: block;
+                height: 2px;
+                position: relative;
+                transition: background .2s ease-out;
+                width: 18px;
+                
+                &:before {
+                    @include iconBurgerMenu;
+                    top: 5px;
+                }
+                &:after {
+                    @include iconBurgerMenu;
+                    top: -5px;                  
+                }
+            }
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;   
+        }
+    }   
+    
+    .isChecked {
+        position: fixed;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        text-align: center;
+        animation-name: glissement;
+        animation-duration: 0.5s;
+        background-color: white;
+        z-index: 2;
+
+        @keyframes glissement {
+            from {
+                opacity: 0;
+            }
+            
+            to {
+                opacity: 1;
+
+            }
+        }
+
+        .projects, .skills, .contact, :nth-child(4) {
+            position: absolute;
+            left: 0;
+            right: 0;
+
+            &:nth-child(4) {
+                top: 50vh;
+            }
+        }
+
+        .projects {
+            top: 20vh;
+        }
+
+        .skills {
+            top: 30vh;
+        }
+        
+        .contact {        
+            top: 40vh;
+        }
+
+        .button-send {
+            @include send-button;
+        }
+        
+        li {
+        
+            padding: 1em;
+            
+            &:not(:last-child) {
+                color: $textColor;        
+            }
+
+            &:nth-child(3) {
+                color: $secondaryColor;
+            }
+            
+            a {
+                font-size: 1.2em;
+                transition-duration: 0.3s;
+
+                &:visited {
+                    color: inherit;
+                }
+                
+
+                &:hover {
+                    color: $secondaryColor;
+                }
+                
+            }
+        }
+
+    }
+
+    .onMenu {
+        color: $textColor;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        width: 100%;
+        bottom: 0;
+        right: 0;
+        background-color: rgb(246, 246, 246);
+        padding: 2em;
+        border-top: 1px solid lightgray;
+        font-size: 1.2em;
+
+        a {
+            color: $textColor;
+
+            &:first-child {
+                margin-bottom: 1em;
+            }
+        }
+    }
+
+    /* HOME */
+    .home-wrapper {
+        position: relative;
+        text-align: center;
+        padding: 7em 2em 2em 2em;
+        
+        * {
+            margin-bottom: 1em;
+        }
+        .description {
+
+            .first {
+                color: $textColor;
+            }
+            
+            .job {
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+
+        }
+
+        .buttons {
+            
+            .more-about-me {
+                color: $secondaryColor;
+                font-weight: bold;
+            }
+        }
+     
+    }
+
+    .hidden {
+        display: none;
+    }
+    
+    .isActive {
+        
+        display: block;
+        animation-name: slide;
+        animation-duration: 0.5s;
+
+        @keyframes slide {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            
+            to {
+                transform: translateX(0);
+                opacity: 1;
+
+            }
+        }
+    }
+
+    .all-projects {
+        padding: 2em;
+
+        .projects-wrapper {
+
+            flex-direction: column;
+            
+            picture {
+
+                margin-bottom: 2em;
+                
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    /* SKILLS */
+    .abilities {
+        
+        padding: 2em;
+        
+        .items {
+            flex-wrap: wrap;
+        }
+        
+    }
+    
+    /* CONTACT */
+    .to-contact {
+        padding: 2em;
+        flex-direction: column;
+        justify-content: center;
+    }
 }

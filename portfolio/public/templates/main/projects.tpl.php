@@ -1,40 +1,26 @@
-<?php
-    $requete = $bdd->prepare('SELECT * FROM `projects`');
-    $requete->execute();
+<div class="all-projects" id="projects">
+    <h2>Projets</h2>
+    <p>
+        Forum, site de petites annonces, clones, projet en groupe...<br>
+        Ici, mes principales réalisations<br>
+    </p>
+    <div class="projects-wrapper">
+        <picture>
+            <a href="https://www.youtube.com/watch?v=BBcbMowZVdY&list=PLnn3ZOqA1n-d_G8Mpj6P00tcZcbg73Eam&ab_channel=Dump%26Dev" target="_blank"><source srcset="../../assets/images/projets/lebonRecoin.PNG"
+                media="(max-width: 767px)">
+            <img src="../../assets/images/projets/lebonRecoinDesktop.PNG" alt=""></a>
+        </picture>
 
-    $imgAltClass = ' alt=\'langages utilisées\' class=\'iconSkills\'>';
-?>
+        <picture>
+            <a href="https://www.youtube.com/watch?v=G1NN3ZND8CA&list=PLnn3ZOqA1n-cLcdSfiCRbtP8-akYv1Lpi&ab_channel=Dump%26Dev" target="_blank"><source srcset="../../assets/images/projets/apex.PNG"
+                media="(max-width: 767px)">
+            <img src="../../assets/images/projets/apexDesktop.PNG" alt=""></a>
+        </picture>
 
-
-<div class="projects" id="projects">
-    <h2>Réalisations</h2>
-    <div class="projects-container">
-        
-        <?php while($resultat = $requete->fetch()) { ?>
-                     
-            <div class="content-project">
-                <div class="itemsProject">
-                
-                    <h3><?=$resultat['title']?></h3>               
-         
-                    <?= !empty($resultat['logo_symfony']) ? '<img src='.$resultat['logo_symfony']. $imgAltClass : '' ?>             
-                    <?= !empty($resultat['logo_php']) ? '<img src='.$resultat['logo_php']. $imgAltClass : '' ?>             
-                    <?= !empty($resultat['logo_mysql']) ? '<img src='.$resultat['logo_mysql']. $imgAltClass : '' ?>             
-                    <?= !empty($resultat['logo_javascript']) ? '<img src='.$resultat['logo_javascript']. $imgAltClass : '' ?>             
-                      
-                    <p class="infosProjects describeHidden"><?=$resultat['first_describe']?></p>
-
-                    <?= !empty($resultat['second_describe describeHidden']) ? '<p>'.$resultat['second_describe'].'</p>' : '' ?>                                              
-                    
-                    <?php if ($resultat['link_github'] !== ''):?>
-                        <p><a href="<?=$resultat['link_github']?>">Lien du repo</a></p>
-                    <?php endif ?>
-
-                    <?php if ($resultat['link_youtube'] !== ''):?>
-                        <p><a href="<?=$resultat['link_youtube']?>">Démo du projet</a></p>
-                    <?php endif ?>
-                </div>
-            </div>                  
-        <?php } ?>
+        <picture>
+            <a href="https://github.com/ZakariaBouhou/Projet-Care-The-World" target="_blank"><source srcset="../../assets/images/projets/caretheworld.PNG"
+                media="(max-width: 767px)">
+            <img src="../../assets/images/projets/caretheworldDesktop.PNG" alt=""></a>
+        </picture>
     </div>
 </div>

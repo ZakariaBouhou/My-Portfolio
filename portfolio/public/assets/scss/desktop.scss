@@ -1,109 +1,79 @@
-@media screen and (min-width: 768px) {    
+@import 'variables';
 
-    /* Landing page */
-
-    .bg-img {
-        justify-content: space-around;
-
-        .about {
-            background-color:rgba(47,79,79, 0.3);
-            padding: 1em;
-            text-align: center;
-            margin: 0 auto;
-            width: 50%;
-            font-size: 2.3em;
-            font-style: italic;
-
-            #firstname, #job {   
-                padding-bottom: 1em;
-                font-size : 0.8em;
-            }
-            
-            #city {
-                padding: 0;
-                font-size : 0.8em;
-            }
-        }
-    }
-
-    /* Description text */
-
-    .content-description {     
-        padding: 1.5em;
-        width: 50%;
-    }
-
-    /* Skills */
-
-    .skills {
-        padding-bottom: 1.4em;
+@media screen and (min-width: 768px) {  
+    
+    /* MENU */
+    nav {    
+        padding: 0;
+        display: flex;
+        justify-content: space-evenly;
+        backdrop-filter: blur(20px) saturate(180%);
         
-        .tool-container {
+        .menu {
             display: flex;
-            justify-content: space-evenly;
-        }
-    }
-
-    .skillName {
-        font-weight: bold;
-    }
-
-    
-    .iconSkills.anim {
-        animation: fromRightSide 0.8s forwards;  
-        animation-delay: 1.5s;
-    }
-
-    .skillName.anim {
-        animation: fromLeftSide 2s forwards;
-    }
-
-    /* Projects */
-
-    .projects {       
-        padding-bottom: 2.8em;
-
-        .projects-container {
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-    
-        .content-project {
-            width: 25%;
+            justify-content: space-between;
+            align-items: center;
             
-            &:hover {
-                border-color: #1abc9c;
-                box-shadow: 0 0 0.4em #1abc9c;
+            li {
+                a {
+                    padding-left: 1em;
+                    font-size: 1.2em;
+                }
+            }
+
+        }
+        .menu-btn, .menu-icon {
+            display: none;
+        }
+
+        .themeToggleButton {
+            align-self: center;
+        }
+    }
+
+    /* HOME */
+    .home-wrapper {
+        text-align: center;
+        padding: 8em 5em 5em 5em;
+
+        * {
+            margin-bottom: 1em;
+        }
+        .description {
+
+            .first {
+                font-size: 1.5em;
+            }
+            
+            .job {
+                font-size: 1.8em;
+            }
+            
+            .what-i-do {
+                font-size: 1.4em;
+            }
+            
+        }
+        
+        .buttons {
+            
+            .more-about-me {
+                color: $secondaryColor;
+                font-weight: bold;
+                margin-left: 1em;
             }
         }
     }
-
-    .itemsProject.anim {
-        animation: fromLeftSide 2s;
-
-        h3 {
-            padding-top: 1.5em;
-        }
+        
+    .projects-wrapper {
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
-
-    /* Contact */
-
-    .form-container {
-        margin: 0 auto;
-        width: 50%;
-
-        input[type="button"], [type="submit"] {
-            width: 50%;
-            margin: 0 auto;
-        }
-    }
-
-    /* Legals */
- 
-    .legals img {
-        width: 2em;
-        height: 2em;
-        padding-bottom: 1em;
+    
+    .to-contact {
+        justify-content: space-around;
+        align-items: center;
+        
     }
 
 }

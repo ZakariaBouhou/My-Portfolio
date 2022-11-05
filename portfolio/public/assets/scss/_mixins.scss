@@ -1,0 +1,51 @@
+@mixin googleFonts($nom) {
+    @import url('https://fonts.googleapis.com/css2?family=' + $nom + '&display=swap');
+}
+
+@mixin send-button {
+    border-radius: 9999px;
+    position: relative;
+    letter-spacing: 0.025em;
+    font-weight: 700;
+    display: inline-block;
+    line-height: 1.5rem;
+    padding: 0.5rem 1rem 0.6rem 1rem;
+    background-image: linear-gradient(90deg,#009bff,#0062ff);
+    box-shadow: 0 2px 8px 0 rgba(0,34,255,.08),0 2px 8px 0 rgba(0,11,80,.12);
+    margin-bottom: 2em;
+    
+    &::before {
+        content: 'Envoyer un message';
+        color: white;
+    }
+}
+
+@mixin projects-button {
+    border-radius: 9999px;
+    position: relative;
+    letter-spacing: 0.025em;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 1.5rem;
+    padding: 0.5em;
+    background-image: linear-gradient(90deg,#009bff,#0062ff);
+    box-shadow: 0 2px 8px 0 rgba(0,34,255,.08),0 2px 8px 0 rgba(0,11,80,.12);
+    
+    &::before {
+        content: 'Voir mes projets';
+        color: white;
+    }
+}
+
+@mixin animation($delay) {
+    opacity: 0;
+    animation-name: opacity;
+    animation-duration: 0.5s;
+    animation-delay: $delay;
+    animation-fill-mode: forwards;
+}
+
+/* For darktheme stylesheet */
+@mixin bgColor($color) {
+    background-color: $color;
+}
