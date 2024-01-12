@@ -15,65 +15,30 @@
             align-items: center;
             
             li {
-                a {
-                    padding-left: 1em;
-                    font-size: 1.2em;
-                }
+                font-size: 1.4em;
+            }
+
+            .contact {
+                padding-left: 1em;
             }
 
         }
-        .menu-btn, .menu-icon {
-            display: none;
-        }
 
-        .themeToggleButton {
-            align-self: center;
-        }
     }
 
     /* HOME */
     .home-wrapper {
         text-align: center;
-        padding: 8em 5em 5em 5em;
+        padding: 10em 5em 5em 5em;
 
         * {
             margin-bottom: 1em;
         }
-        .description {
-
-            .first {
-                font-size: 1.5em;
-            }
-            
-            .job {
-                font-size: 1.8em;
-            }
-            
-            .what-i-do {
-                font-size: 1.4em;
-            }
-            
-        }
-        
-        .buttons {
-            
-            .more-about-me {
-                color: $secondaryColor;
-                font-weight: bold;
-                margin-left: 1em;
-            }
-        }
     }
-        
-    .projects-wrapper {
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    
+       
     .to-contact {
         justify-content: space-around;
-        align-items: center;
-        
+        align-items: center;     
     }
 
 }

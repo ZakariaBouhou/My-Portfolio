@@ -2,7 +2,7 @@
 @import 'mobile', 'desktop', 'mixins';
 
 
-@include googleFonts('Poppins');
+@include googleFonts('Figtree');
 
 /* GENERAL */
 
@@ -11,102 +11,42 @@ html {
 
     body {
         overflow-x: hidden !important;
-        font-family: 'Poppins', 'Open Sans', sans-serif;
-        background-color: white;
+        font-family: 'Figtree', 'Open Sans', sans-serif;
 
         a {
             text-decoration: none;
-        }
-
-        nav #home, .job, h2, h3, footer a {
+            color: $mainColor;
             font-weight: bold;
         }
 
+        h2, h3 {
+            font-weight: bold;
+        }
+        
         /* MENU */
-        nav {
-
+        nav {          
             position: fixed;
             width: 100%;
             z-index: 3;
-            box-shadow: $boxShadow;
             -webkit-backdrop-filter: blur(20px) saturate(180%);
             padding: 1.5em;
             background-color: rgba(255,255,255,.9);
-
-            a {
-                align-self: center;
-            }
-
-            #home {
-                color: $secondaryColor;
-                font-size: 1.2em;
-            }
-
-            .themeToggleButton {
-
-                .checkbox {
-                        opacity: 0;
-                        position: absolute;
-                    }
-    
-                .label {
-                    width: 2.5em;
-                    background-color:#EDEDED;
-                    display: flex;
-                    border-radius:50px;
-                    align-items: center;
-                    justify-content: space-around;
-                    padding: 5px;
-                    position: relative;
-                    transform: scale(1.5);
-                    height: 20px;
-                    cursor: pointer;
-                }
-    
-                .ball {
-                    width: 25px;
-                    height: 25px;
-                    background-color: white;
-                    position: absolute;
-                    left: 2px;
-                    border-radius: 50%;
-                    transition: transform 0.2s linear;
-                }
-    
-                /*  target the element after the label*/
-                .checkbox:checked + .label .ball{
-                    transform: translateX(21px);
-                }
-    
-                .fa-moon, .fa-sun {
-                    color: black;
-                    font-size: x-small;
-                    z-index: 1;
-                }
-            }
-
             .menu {
 
                 .projects, .skills {
                     
                     a {
-                        color: $textColor;
+                        //background-color: blue;
                         transition-property: color;
                         transition-duration: 0.3s;
                         
                         &:hover {
-                            color: $secondaryColor;
+                            //background-color: blue;
                         }
                         
-                    }
-        
+                    }       
                     
                 }
-           
-                .contact > a {
-                    color: $secondaryColor;
-                }
-                
             }
 
             
@@ -115,27 +55,14 @@ html {
         /* HOME (Main title, job, picture) */
         
         .home-wrapper {
-            box-shadow: $boxShadow;
             
             .description {
+                width: 50%;
+                margin: auto;
                 
-                .first {
-                    color: $textColor;
-                    animation-name: opacity;
-                    animation-duration: 2s;
-                }
-                
-                .job {
-                    @include animation($delay: 1.3s);
-                }
-                
-                .what-i-do {
-                    @include animation($delay: 1.4s);
-                    color: $textColor;
-                    
-                    a {
-                        color: $secondaryColor;
-                    }
+                h1 {
+                    font-size: 5em;
+                    font-weight: bold;
                 }
                 
             }
@@ -149,27 +76,6 @@ html {
                 to {
                     transform: translateY(0);
                     opacity: 1;
-                    
-                }
-            }
-            
-            picture {
-                position: relative;
-                animation-name: opacity;
-                animation-duration: 2s;
-            
-                
-                &::after {
-
-                    content: "";
-                    width: 200%;
-                    height: 5em;
-                    left: 50%;
-                    transform: translate(-50%,30%);
-                    bottom: 0;
-                    position: absolute;
-                    display: block;
-                    background-image: linear-gradient(180deg,hsla(0,0%,100%,0) 1%,#fff 37%);
                     
                 }
             }
@@ -190,18 +96,9 @@ html {
             text-align: center;
             padding-top: 2em;
             padding-bottom: 2em;
-            box-shadow: $boxShadow;
-            
-            h2, p {
-                margin-bottom: 1em;
-            }
+
             h2 {
-                font-size: 1.4em;
-            }
-            
-            p {
-                font-size: 1.2em;
-                color: $textColor;
+                font-size: 2em;
             }
 
             .projects-wrapper {
@@ -231,7 +128,6 @@ html {
             text-align: center;
             padding-top: 2em;
             padding-bottom: 2em;
-            box-shadow: $boxShadow;
             
             h2, p {
                 margin-bottom: 1em;
@@ -240,7 +136,7 @@ html {
             
             p {
                 font-size: 1.2em;
-                color: $textColor;
+                color: $mainColor;
             }
             
             .items {
@@ -264,21 +160,6 @@ html {
             padding-bottom: 2em;
             display: flex;
             text-align: center;
-            box-shadow: $boxShadow;
-            
-            .right-side  {
-                display: flex;
-                flex-direction: column;
-                font-size: 1.2em;
-                
-                a {
-                    color: $textColor;
-                    
-                    &:first-child {
-                        margin-bottom: 1em;
-                    }
-                }
-            }
             
             h3 {
                 margin-bottom: 1em;
@@ -327,15 +208,10 @@ html {
     footer {
         padding: 2em;
 
-        span {
+        p {
             display: block;
             text-align: center;
-            color: $textColor;
-            
-            a {
-                color: $secondaryColor;
-                font-size: small;          
-            }
+            color: black;
         }
     }
 
