@@ -29,7 +29,9 @@ html {
             z-index: 3;
             -webkit-backdrop-filter: blur(20px) saturate(180%);
             padding: 1.5em;
+            //margin: 1.5em;
             background-color: rgba(255,255,255,.9);
+
             .menu {
 
                 .projects, .skills {
@@ -51,17 +53,17 @@ html {
             
         }
 
-        /* HOME (Main title, job, picture) */
+        /* HOME */
         
         .home-wrapper {
             
             .description {
-                width: 50%;
+                position: relative;
+                max-width: 50%;
                 margin: auto;
                 
                 h1 {
-                    position: relative;
-                    font-size: 5em;
+                    font-size: 6em;
                     font-weight: bold;
 
                     span {
@@ -70,9 +72,10 @@ html {
                 }
 
                 img {
-                    rotate: 10deg;
+                    rotate: -10deg;
                     position: absolute;
-                    right: 2em;
+                    right: 12em;
+                    bottom: 0;
                 }
                 
             }
@@ -134,6 +137,23 @@ html {
         to {
             transform: translateX(0);
             opacity: 1;
+            
+        }
+    }
+    
+    #clap {
+        animation: test 0.5s ease-out 0s 1 normal forwards running;
+    }
+    
+    @keyframes test {
+        from {
+            transform: translate(5em);
+            rotate: -10deg;
+        }
+        
+        to {
+            transform: translate(0);
+            rotate: 10deg;
             
         }
     }
