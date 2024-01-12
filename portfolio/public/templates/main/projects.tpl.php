@@ -14,5 +14,6 @@
             </picture>
         <?php //} ?>
     </div> -->
+    <img src="../../assets/images/photos/zak.png" alt="photo for desktop" id="clap">
 
 </div>
