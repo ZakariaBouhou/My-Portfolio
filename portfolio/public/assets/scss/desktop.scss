@@ -28,6 +28,16 @@
 
     /* HOME */
     .home-wrapper {
+
+        h1 {
+            font-size: 6em;
+        }
+
+        .description {
+            position: relative;
+            max-width: 50%;
+            margin: auto;
+        }
         text-align: center;
         padding: 10em 5em 5em 5em;
         //margin: 10em 5em 5em 5em;
@@ -35,6 +45,34 @@
         * {
             margin-bottom: 1em;
         }
-    }      
+    }   
+    
+    .all-projects, .to-contact {
+            
+        padding-top: 2em;
+        padding-bottom: 2em;
+
+        h2, h3 {
+      
+            font-size: 2em;             
+            
+        }
+    }
+
+    .to-contact  {
+
+        .logo-contact {
+            width: 10%;
+        }
+
+        h3 {
+            margin-bottom: 1em;
+            font-size: 1.4em;
+        }
+    }
+
+    .all-projects {
+        text-align: center;
+    }
 
 }

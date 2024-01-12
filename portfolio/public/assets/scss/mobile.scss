@@ -1,120 +1,41 @@
 @import 'variables', 'mixins';
 
-@media screen and (max-width: 767px) {  
-
+@media screen and (max-width: 767px) {
     
-    .onMenu {
-        color: $mainColor;
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        width: 100%;
-        bottom: 0;
-        right: 0;
-        background-color: rgb(246, 246, 246);
-        padding: 2em;
-        border-top: 1px solid lightgray;
-        font-size: 1.2em;
-
-        a {
-            color: $mainColor;
-
-            &:first-child {
-                margin-bottom: 1em;
-            }
-        }
-    }
-
-    /* HOME */
-    .home-wrapper {
-        position: relative;
-        text-align: center;
-        padding: 7em 2em 2em 2em;
+    body {
+        overflow-x: hidden;
+        max-width: 100vw;
         
-        * {
-            margin-bottom: 1em;
+        #clap {
+            display: none;
         }
-        .description {
-
-            .first {
-                color: $mainColor;
-            }
-            
-            .job {
-                font-size: 1.2em;
-                font-weight: bold;
-            }
-
-        }
-
-        .buttons {
-            
-            .more-about-me {
-                color: $mainColor;
-                font-weight: bold;
-            }
-        }
-     
-    }
-
-    .hidden {
-        display: none;
-    }
+        
+        .container {
+            width: 80vw;
+            //margin: 2em;
     
-    .isActive {
-        
-        display: block;
-        animation-name: slide;
-        animation-duration: 0.5s;
-
-        @keyframes slide {
-            from {
-                transform: translateX(-50px);
-                opacity: 0;
-            }
-            
-            to {
-                transform: translateX(0);
-                opacity: 1;
-
-            }
-        }
-    }
-
-    .all-projects {
-        padding: 2em;
-
-        .projects-wrapper {
-
-            flex-direction: column;
-            
-            picture {
-
-                margin-bottom: 2em;
+            main {
+                padding-top: 8em;
+                display: flex;
+                flex-direction: column;
+                //justify-content: center;
+                text-align: center;
                 
-                img {
-                    width: 100%;
+                .description {
+                    display: flex;
+                    flex-direction: column;
+                    //justify-content: center;
+
+                    h1 {
+                        font-size: 3em;
+                    }
+                }
+
+                .all-projects > h2, .to-contact > h3 {           
+                    font-size: 1.5em;                  
                 }
             }
         }
     }
 
-    /* SKILLS */
-    .abilities {
-        
-        padding: 2em;
-        
-        .items {
-            flex-wrap: wrap;
-        }
-        
-    }
-    
-    /* CONTACT */
-    .to-contact {
-        padding: 2em;
-        flex-direction: column;
-        justify-content: center;
-    }
 }
