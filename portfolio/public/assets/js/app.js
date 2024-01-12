@@ -1,5 +1,5 @@
 // Display menu after click on burger menu
-import * as variables from './variables.js';
+//import * as variables from './variables.js';
 import {animationElementsWithObserver} from './functions.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,6 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     animationElementsWithObserver();
     
-    variables.link.rel = 'stylesheet';
+    //variables.link.rel = 'stylesheet';
 
 })
