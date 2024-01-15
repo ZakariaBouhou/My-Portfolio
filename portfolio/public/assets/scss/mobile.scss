@@ -4,36 +4,69 @@
     
     body {
         overflow-x: hidden;
-        max-width: 100vw;
+        overflow-y: auto;
+        //max-width: 100vw;
+        box-sizing: border-box;
+        min-height: 100vh;
         
-        #clap {
+        #clap, .menu > .projects {
             display: none;
+        }
+
+        header {
+            nav {
+                display: flex;
+                justify-content: space-between;
+                /* overflow: scroll; */
+                width: 90%;
+                /* align-content: center; */
+                margin: auto;      
+                
+                .menu {
+                    align-self: center;
+                }
+            }
         }
         
         .container {
-            width: 80vw;
-            //margin: 2em;
-    
+            display: flex;
+            flex-direction: column;
+
             main {
-                padding-top: 8em;
+                box-sizing: border-box;
                 display: flex;
                 flex-direction: column;
-                //justify-content: center;
+                align-items: center;
                 text-align: center;
-                
-                .description {
-                    display: flex;
-                    flex-direction: column;
-                    //justify-content: center;
 
-                    h1 {
-                        font-size: 3em;
-                    }
+                .home-wrapper {
+                    width: 100%;
                 }
 
+                .description {
+                    padding: 1.5em;
+                }
+                
+                .description > h1 {
+                    font-size: 3em;
+                }
+    
                 .all-projects > h2, .to-contact > h3 {           
                     font-size: 1.5em;                  
                 }
+
+                .to-contact {
+                    padding-bottom: 1em;
+                }
+            }
+        }
+
+        footer {
+            padding-top: 1em;
+            border-top: 1px solid #E8E8E9;
+            
+            p {
+                padding: 1em;
             }
         }
     }

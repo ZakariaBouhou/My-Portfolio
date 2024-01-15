@@ -14,11 +14,11 @@
     <div class="container">
         <header id="main">
             <nav>
-                <picture>
+                <div class="logo">
                     <a href="#main" id="home">
                         <img src="../../assets/images/photos/onirik.png" alt="logo Onirik">
                     </a>
-                </picture>
+                </div>               
                 <ul class="menu">
                     <li class="projects"><a href="#projects">Réalisations</a></li>
                     <li class="contact"><a href="mailto:zak.bouhou@outlook.fr">Contact</a></li>

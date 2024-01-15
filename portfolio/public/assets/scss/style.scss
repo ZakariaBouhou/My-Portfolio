@@ -1,7 +1,7 @@
 /* ____ MAIN STYLESHEET FOR ALL MEDIA QUERIES ____ */
 @import 'mobile', 'desktop', 'mixins';
 
-@include googleFonts('Figtree:ital,wght@0,300..900;1,300..900');
+@include googleFonts('Montserrat:ital,wght@0,100..900;1,100..900');
 
 /* GENERAL */
 
@@ -9,8 +9,7 @@ html {
     scroll-behavior: smooth;
 
     body {
-        overflow-y: scroll;
-        font-family: 'Figtree', 'Open Sans', sans-serif;
+        font-family: 'Montserrat', 'Open Sans', sans-serif;
 
         a {
             text-decoration: none;
@@ -23,35 +22,38 @@ html {
         }
         
         /* MENU */
-        nav {          
-            position: fixed;
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
             width: 100%;
-            z-index: 3;
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            padding: 1.5em;
-            background-color: rgba(255,255,255,.9);
 
-            .menu {
-
-                .projects, .contact {
-                    
-                    a {
-                        //background-color: blue;
-                        border-radius: 5px;
-                        padding: 0.5em;
-                        transition-property: background-color;
-                        transition-duration: 0.4s;
+            nav {          
+                -webkit-backdrop-filter: blur(20px) saturate(180%);
+                padding: 1.5em;
+                background-color: rgba(255,255,255,.9);
+    
+                .menu {
+    
+                    .projects, .contact {
                         
-                        &:hover {
-                            background-color: rgb(229, 228, 228);
-                        }
+                        a {
+                            border-radius: 5px;
+                            padding: 0.5em;
+                            transition-property: background-color;
+                            transition-duration: 0.4s;
+                            
+                            &:hover {
+                                background-color: rgb(229, 228, 228);
+                            }
+                            
+                        }       
                         
-                    }       
-                    
-                }
+                    }
+                }   
+                
             }
-
-            
         }
 
         /* HOME */
@@ -73,16 +75,7 @@ html {
                 bottom: 0;
             }             
             
-        }
-        
-        /* PROJECTS */
-        
-        /* .all-projects > h2, .to-contact > h3 {           
-            font-size: 2em;
-            
-        } */
-        
-        /* CONTACT */
+        }       
         
         .to-contact {
             text-align: center;
@@ -139,10 +132,10 @@ html {
     
     /* FOOTER */
     footer {
+        text-align: center;
         
         p {
-            display: block;
-            text-align: center;
+            display: inline;
             color: black;
         }
     }
